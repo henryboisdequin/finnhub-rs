@@ -4,21 +4,12 @@
 
 mod client;
 mod types;
+mod utils;
 
 #[cfg(test)]
 mod test {
     use super::client::*;
-    use dotenv::dotenv;
-    use std::env;
-
-    fn get_test_api_key() -> String {
-        dotenv().ok();
-
-        let key = "TEST_API_KEY";
-        let test_api_key = env::var(key).expect("Key, value pair not present in .env file");
-
-        test_api_key
-    }
+    use super::utils::*;
 
     #[test]
     fn create_client() {

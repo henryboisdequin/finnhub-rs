@@ -1,3 +1,5 @@
+#![allow(non_snake_case)]
+
 use serde_derive::{Deserialize, Serialize};
 
 #[derive(Serialize, Deserialize, Debug)]
