@@ -1,7 +1,8 @@
+#![allow(dead_code)]
+
 use super::types::*;
 use exitfailure::ExitFailure;
 use reqwest::Url;
-use serde_derive::{Deserialize, Serialize};
 
 /// Finnhub API Client object.
 #[derive(Debug)]
@@ -10,10 +11,12 @@ pub struct Client {
 }
 
 impl Client {
+    /// Creates a new Finnhub Client
     pub fn new(api_key: String) -> Self {
         Self { api_key }
     }
 
+    /// Lookups a symbol in the Finnhub API
     pub async fn symbol_lookup(self, query: String) -> Result<SymbolLookup, ExitFailure> {
         let url = format!(
             "https://finnhub.io/api/v1/search?q={}&token={}",
@@ -58,6 +61,35 @@ impl Client {
 
         let url = Url::parse(&*url)?;
         let res = reqwest::get(url).await?.json::<Vec<MarketNews>>().await?;
+
+        Ok(res)
+    }
+
+    pub async fn company_news(
+        self,
+        symbol: String,
+        from: String,
+        to: String,
+    ) -> Result<Vec<CompanyNews>, ExitFailure> {
+        let url = format!(
+            "https://finnhub.io/api/v1/company-news?symbol={}&from={}&to={}&token={}",
+            symbol, from, to, self.api_key
+        );
+
+        let url = Url::parse(&*url)?;
+        let res = reqwest::get(url).await?.json::<Vec<CompanyNews>>().await?;
+
+        Ok(res)
+    }
+
+    pub async fn news_sentiment(self, symbol: String) -> Result<NewsSentiment, ExitFailure> {
+        let url = format!(
+            "https://finnhub.io/api/v1/news-sentiment?symbol={}&token={}",
+            symbol, self.api_key
+        );
+
+        let url = Url::parse(&*url)?;
+        let res = reqwest::get(url).await?.json::<NewsSentiment>().await?;
 
         Ok(res)
     }

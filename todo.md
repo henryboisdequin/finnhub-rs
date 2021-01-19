@@ -1,4 +1,3 @@
-company news
 News Sentiment
 Peers
 Basic Financials

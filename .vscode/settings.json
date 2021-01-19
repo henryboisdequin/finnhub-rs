@@ -5,10 +5,14 @@
     "Financials",
     "Finnhub",
     "Forex",
+    "compiletest",
     "datetime",
+    "deps",
+    "dotenv",
     "exitfailure",
     "figi",
     "reqwest",
+    "rmeta",
     "weburl"
   ]
 }
