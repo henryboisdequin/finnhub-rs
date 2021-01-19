@@ -1,4 +1,3 @@
-News Sentiment
 Peers
 Basic Financials
 Financials As Reported
