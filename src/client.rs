@@ -7,6 +7,7 @@ use reqwest::Url;
 /// Finnhub API Client object.
 #[derive(Debug)]
 pub struct Client {
+    /// API key from the Finnhub dashboard.
     pub api_key: String,
 }
 
@@ -29,6 +30,7 @@ impl Client {
         Ok(res)
     }
 
+    /// Returns a list of supported stocks given the exchange.
     pub async fn stock_symbol(self, exchange: String) -> Result<Vec<StockSymbol>, ExitFailure> {
         let url = format!(
             "https://finnhub.io/api/v1/stock/symbol?exchange={}&token={}",
@@ -41,6 +43,7 @@ impl Client {
         Ok(res)
     }
 
+    /// Returns the profile of the company specified.
     pub async fn company_profile2(self, symbol: String) -> Result<CompanyProfile, ExitFailure> {
         let url = format!(
             "https://finnhub.io/api/v1/stock/profile2?symbol={}&token={}",
@@ -53,6 +56,7 @@ impl Client {
         Ok(res)
     }
 
+    /// Returns the latest market news in the given category.
     pub async fn market_news(self, category: String) -> Result<Vec<MarketNews>, ExitFailure> {
         let url = format!(
             "https://finnhub.io/api/v1/news?category={}&token={}",
@@ -65,6 +69,7 @@ impl Client {
         Ok(res)
     }
 
+    /// Returns the company news from the company specified in the given time period.
     pub async fn company_news(
         self,
         symbol: String,
@@ -82,6 +87,7 @@ impl Client {
         Ok(res)
     }
 
+    /// Returns the latest sentiment of news of the company specified.
     pub async fn news_sentiment(self, symbol: String) -> Result<NewsSentiment, ExitFailure> {
         let url = format!(
             "https://finnhub.io/api/v1/news-sentiment?symbol={}&token={}",
@@ -94,6 +100,7 @@ impl Client {
         Ok(res)
     }
 
+    /// Returns the specified companies peers.
     pub async fn peers(self, symbol: String) -> Result<Vec<String>, ExitFailure> {
         let url = format!(
             "https://finnhub.io/api/v1/stock/peers?symbol={}&token={}",
@@ -106,6 +113,7 @@ impl Client {
         Ok(res)
     }
 
+    /// Returns the basic financials of the company specified according to the given metric.
     pub async fn basic_financials(
         self,
         symbol: String,

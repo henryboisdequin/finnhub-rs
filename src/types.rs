@@ -1,4 +1,4 @@
-#![allow(non_snake_case)]
+#![allow(non_snake_case, missing_docs)]
 
 use serde_derive::{Deserialize, Serialize};
 

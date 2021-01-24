@@ -2,8 +2,10 @@
 
 //! Finnhub-rs is a client for the Finnhub API implemented in Rust.
 
-mod client;
-mod types;
+/// Finnhub-rs client which is initialized with an API key.
+pub mod client;
+/// All return types for all Finnhub-rs client methods.
+pub mod types;
 mod utils;
 
 #[cfg(test)]
