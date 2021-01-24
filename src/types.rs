@@ -90,3 +90,39 @@ pub struct Sentiment {
     pub bearishPercent: usize,
     pub bullishPercent: usize,
 }
+
+#[derive(Serialize, Deserialize, Debug)]
+pub struct BasicFinancials {
+    pub series: Series,
+    pub metric: Metric,
+    pub metricType: String,
+    pub symbol: String,
+}
+
+#[derive(Serialize, Deserialize, Debug)]
+pub struct Series {
+    pub annual: Annual,
+}
+
+#[derive(Serialize, Deserialize, Debug)]
+pub struct Annual {
+    pub currentRatio: Vec<PeriodPlusV>,
+    pub salesPerShare: Vec<PeriodPlusV>,
+    pub netMargin: Vec<PeriodPlusV>,
+}
+
+#[derive(Serialize, Deserialize, Debug)]
+pub struct PeriodPlusV {
+    pub period: String,
+    pub v: f64,
+}
+
+#[derive(Serialize, Deserialize, Debug)]
+pub struct Metric {
+    pub _10DayAverageTradingVolume: f64,
+    pub _52WeekHigh: f64,
+    pub _52WeekLow: f64,
+    pub _52WeekLowDate: String,
+    pub _52WeekPriceReturnDaily: f64,
+    pub beta: f64,
+}

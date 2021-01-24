@@ -1,5 +1,3 @@
-Peers
-Basic Financials
 Financials As Reported
 SEC Filings
 IPO Calendar
