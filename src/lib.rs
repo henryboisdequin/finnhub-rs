@@ -1,6 +1,22 @@
 #![warn(missing_debug_implementations, rust_2018_idioms, missing_docs)]
 
 //! Finnhub-rs is a client for the Finnhub API implemented in Rust.
+//!
+//! Minimal Example:
+//! ```rust
+//! // Use finnhub-rs client.
+//! use finnhub_rs::client::Client;
+//!
+//! fn main() {
+//!   // Create a new finnhub client.
+//!   let client = Client::new("MY FINNHUB API KEY".to_string());
+//!    // Get a list of supported stocks given the exchange.
+//!    let res = client.stock_symbol("US".to_string()).await.unwrap();
+//!    // Print out the results.
+//!    println!("{:#?}", res);
+//!}
+//!```
+//!
 
 /// Finnhub-rs client which is initialized with an API key.
 pub mod client;
