@@ -2,7 +2,7 @@
 name = "finnhub-rs"
 version = "0.1.0-alpha"
 authors = ["Henry Boisdequin"]
-lisence = "MIT"
+license = "MIT"
 description = "Finnhub-rs is a client for the Finnhub API implemented in Rust."
 homepage = "https://github.com/henryboisdequin/finnhub-rs"
 repository = "https://github.com/henryboisdequin/finnhub-rs"
