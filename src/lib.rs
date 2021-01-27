@@ -76,4 +76,24 @@ mod test {
         let res = client.news_sentiment("FB".to_string()).await.unwrap();
         println!("{:#?}", res);
     }
+
+    #[tokio::test]
+    async fn peers_test() {
+        let test_api_key = get_test_api_key();
+        let client = Client::new(test_api_key);
+        let res = client.peers("MCD".to_string()).await.unwrap();
+        println!("{:#?}", res);
+    }
+
+    #[tokio::test]
+    async fn basic_financials_test() {
+        // TODO: error
+        let test_api_key = get_test_api_key();
+        let client = Client::new(test_api_key);
+        let res = client
+            .basic_financials("NFLX".to_string(), "all".to_string())
+            .await
+            .unwrap();
+        println!("{:#?}", res);
+    }
 }
