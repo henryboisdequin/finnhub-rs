@@ -1,6 +1,6 @@
 [package]
 name = "finnhub-rs"
-version = "0.1.0-alpha"
+version = "0.1.1"
 authors = ["Henry Boisdequin"]
 license = "MIT"
 description = "Finnhub-rs is a client for the Finnhub API implemented in Rust."
