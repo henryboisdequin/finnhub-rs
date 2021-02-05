@@ -93,12 +93,12 @@ pub struct Sentiment {
 
 #[derive(Serialize, Deserialize, Debug)]
 pub struct CompanyQuote {
-    c: f64,
-    h: f64,
-    l: f64,
-    o: f64,
-    pc: f64,
-    t: i128,
+    pub c: f64,
+    pub h: f64,
+    pub l: f64,
+    pub o: f64,
+    pub pc: f64,
+    pub t: i128,
 }
 
 // #[derive(Serialize, Deserialize, Debug)]

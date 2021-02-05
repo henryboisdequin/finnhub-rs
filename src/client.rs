@@ -113,7 +113,7 @@ impl Client {
         Ok(res)
     }
 
-    /// Returns the specified companies peers.
+    /// Returns the specified company's current stock quote.
     pub async fn quote(self, symbol: String) -> Result<CompanyQuote, ExitFailure> {
         let url = format!(
             "https://finnhub.io/api/v1/quote?symbol={}&token={}",
