@@ -5,7 +5,6 @@
 - Price Target
 - Earnings Surprises
 - Earnings Calendar
-- Quote
 - Stock Candles
 - Splits
 - Indices Constituents

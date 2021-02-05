@@ -113,6 +113,19 @@ impl Client {
         Ok(res)
     }
 
+    /// Returns the specified companies peers.
+    pub async fn quote(self, symbol: String) -> Result<CompanyQuote, ExitFailure> {
+        let url = format!(
+            "https://finnhub.io/api/v1/quote?symbol={}&token={}",
+            symbol, self.api_key
+        );
+
+        let url = Url::parse(&*url)?;
+        let res = reqwest::get(url).await?.json::<CompanyQuote>().await?;
+
+        Ok(res)
+    }
+
     // /// Returns the basic financials of the company specified according to the given metric.
     // pub async fn basic_financials(
     //     self,

@@ -91,6 +91,16 @@ pub struct Sentiment {
     pub bullishPercent: usize,
 }
 
+#[derive(Serialize, Deserialize, Debug)]
+pub struct CompanyQuote {
+    c: f64,
+    h: f64,
+    l: f64,
+    o: f64,
+    pc: f64,
+    t: i128,
+}
+
 // #[derive(Serialize, Deserialize, Debug)]
 // pub struct BasicFinancials {
 //     pub series: Series,
