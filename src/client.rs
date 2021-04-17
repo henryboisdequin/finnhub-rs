@@ -19,7 +19,7 @@ impl Client {
         Client::v1(api_key)
     }
 
-    /// Create V1 Finnhub Client
+    /// Create a new V1 Finnhub Client
     pub fn v1(api_key: String) -> Self {
         Client::api("https://finnhub.io/api/v1".to_string(), api_key)
     }
