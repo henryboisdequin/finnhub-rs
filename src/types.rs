@@ -68,27 +68,27 @@ pub struct CompanyNews {
     pub url: String,
 }
 
-// #[derive(Serialize, Deserialize, Debug)]
-// pub struct NewsSentiment {
-//     pub buzz: Buzz,
-//     pub companyNewsScore: i128,
-//     pub sectorAverageBullishPercent: i128,
-//     pub sectorAverageNewsScore: i128,
-//     pub sentiment: Sentiment,
-//     pub symbol: String,
-// }
+#[derive(Serialize, Deserialize, Debug)]
+pub struct NewsSentiment {
+    pub buzz: Buzz,
+    pub companyNewsScore: f64,
+    pub sectorAverageBullishPercent: f64,
+    pub sectorAverageNewsScore: f64,
+    pub sentiment: Sentiment,
+    pub symbol: String,
+}
 
 #[derive(Serialize, Deserialize, Debug)]
 pub struct Buzz {
     pub articlesInLastWeek: usize,
-    pub buzz: i128,
-    pub weeklyAverage: isize,
+    pub buzz: f64,
+    pub weeklyAverage: f64,
 }
 
 #[derive(Serialize, Deserialize, Debug)]
 pub struct Sentiment {
-    pub bearishPercent: usize,
-    pub bullishPercent: usize,
+    pub bearishPercent: f64,
+    pub bullishPercent: f64,
 }
 
 #[derive(Serialize, Deserialize, Debug)]

@@ -87,18 +87,18 @@ impl Client {
         Ok(res)
     }
 
-    // /// Returns the latest sentiment of news of the company specified.
-    // pub async fn news_sentiment(self, symbol: String) -> Result<NewsSentiment, ExitFailure> {
-    //     let url = format!(
-    //         "https://finnhub.io/api/v1/news-sentiment?symbol={}&token={}",
-    //         symbol, self.api_key
-    //     );
+    /// Returns the latest sentiment of news of the company specified.
+    pub async fn news_sentiment(self, symbol: String) -> Result<NewsSentiment, ExitFailure> {
+        let url = format!(
+            "{}/news-sentiment?symbol={}&token={}",
+            &self.api_root, symbol, self.api_key
+        );
 
-    //     let url = Url::parse(&*url)?;
-    //     let res = reqwest::get(url).await?.json::<NewsSentiment>().await?;
+        let url = Url::parse(&*url)?;
+        let res = reqwest::get(url).await?.json::<NewsSentiment>().await?;
 
-    //     Ok(res)
-    // }
+        Ok(res)
+    }
 
     /// Returns the specified companies peers.
     pub async fn peers(self, symbol: String) -> Result<Vec<String>, ExitFailure> {
