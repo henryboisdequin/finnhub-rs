@@ -7,21 +7,33 @@ use reqwest::Url;
 /// Finnhub API Client object.
 #[derive(Debug)]
 pub struct Client {
+    /// API root url
+    pub api_root: String,
     /// API key from the Finnhub dashboard.
     pub api_key: String,
 }
 
 impl Client {
-    /// Creates a new Finnhub Client
+    /// Create default Finnhub Client
     pub fn new(api_key: String) -> Self {
-        Self { api_key }
+        Client::v1(api_key)
+    }
+
+    /// Create V1 Finnhub Client
+    pub fn v1(api_key: String) -> Self {
+        Client::api("https://finnhub.io/api/v1".to_string(), api_key)
+    }
+
+    /// Creates a new Finnhub Client
+    pub fn api(api_root: String, api_key: String) -> Self {
+        Self { api_root, api_key }
     }
 
     /// Lookups a symbol in the Finnhub API
     pub async fn symbol_lookup(self, query: String) -> Result<SymbolLookup, ExitFailure> {
         let url = format!(
-            "https://finnhub.io/api/v1/search?q={}&token={}",
-            query, self.api_key
+            "{}/search?q={}&token={}",
+            &self.api_root, query, self.api_key
         );
 
         let url = Url::parse(&*url)?;
@@ -33,8 +45,8 @@ impl Client {
     /// Returns a list of supported stocks given the exchange.
     pub async fn stock_symbol(self, exchange: String) -> Result<Vec<StockSymbol>, ExitFailure> {
         let url = format!(
-            "https://finnhub.io/api/v1/stock/symbol?exchange={}&token={}",
-            exchange, self.api_key
+            "{}/stock/symbol?exchange={}&token={}",
+            &self.api_root, exchange, self.api_key
         );
 
         let url = Url::parse(&*url)?;
@@ -46,8 +58,8 @@ impl Client {
     /// Returns the profile of the company specified.
     pub async fn company_profile2(self, symbol: String) -> Result<CompanyProfile, ExitFailure> {
         let url = format!(
-            "https://finnhub.io/api/v1/stock/profile2?symbol={}&token={}",
-            symbol, self.api_key
+            "{}/stock/profile2?symbol={}&token={}",
+            &self.api_root, symbol, self.api_key
         );
 
         let url = Url::parse(&*url)?;
@@ -59,8 +71,8 @@ impl Client {
     /// Returns the latest market news in the given category.
     pub async fn market_news(self, category: String) -> Result<Vec<MarketNews>, ExitFailure> {
         let url = format!(
-            "https://finnhub.io/api/v1/news?category={}&token={}",
-            category, self.api_key
+            "{}/news?category={}&token={}",
+            &self.api_root, category, self.api_key
         );
 
         let url = Url::parse(&*url)?;
@@ -77,8 +89,8 @@ impl Client {
         to: String,
     ) -> Result<Vec<CompanyNews>, ExitFailure> {
         let url = format!(
-            "https://finnhub.io/api/v1/company-news?symbol={}&from={}&to={}&token={}",
-            symbol, from, to, self.api_key
+            "{}/company-news?symbol={}&from={}&to={}&token={}",
+            &self.api_root, symbol, from, to, self.api_key
         );
 
         let url = Url::parse(&*url)?;
@@ -103,8 +115,8 @@ impl Client {
     /// Returns the specified companies peers.
     pub async fn peers(self, symbol: String) -> Result<Vec<String>, ExitFailure> {
         let url = format!(
-            "https://finnhub.io/api/v1/stock/peers?symbol={}&token={}",
-            symbol, self.api_key
+            "{}/stock/peers?symbol={}&token={}",
+            &self.api_root, symbol, self.api_key
         );
 
         let url = Url::parse(&*url)?;
@@ -116,8 +128,8 @@ impl Client {
     /// Returns the specified company's current stock quote.
     pub async fn quote(self, symbol: String) -> Result<CompanyQuote, ExitFailure> {
         let url = format!(
-            "https://finnhub.io/api/v1/quote?symbol={}&token={}",
-            symbol, self.api_key
+            "{}/quote?symbol={}&token={}",
+            &self.api_root, symbol, self.api_key
         );
 
         let url = Url::parse(&*url)?;
