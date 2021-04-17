@@ -90,8 +90,8 @@ impl Client {
     /// Returns the latest sentiment of news of the company specified.
     pub async fn news_sentiment(self, symbol: String) -> Result<NewsSentiment, ExitFailure> {
         let url = format!(
-            "{}/news-sentiment?symbol={}&token={}",
-            &self.api_root, symbol, self.api_key
+            "https://finnhub.io/api/v1/news-sentiment?symbol={}&token={}",
+            symbol, self.api_key
         );
 
         let url = Url::parse(&*url)?;
@@ -126,20 +126,20 @@ impl Client {
         Ok(res)
     }
 
-    // /// Returns the basic financials of the company specified according to the given metric.
-    // pub async fn basic_financials(
-    //     self,
-    //     symbol: String,
-    //     metric: String,
-    // ) -> Result<BasicFinancials, ExitFailure> {
-    //     let url = format!(
-    //         "https://finnhub.io/api/v1/stock/metric?symbol={}&metric={}&token={}",
-    //         symbol, metric, self.api_key
-    //     );
+    /// Returns the basic financials of the company specified according to the given metric.
+    pub async fn basic_financials(
+        self,
+        symbol: String,
+        metric: String,
+    ) -> Result<BasicFinancials, ExitFailure> {
+        let url = format!(
+            "https://finnhub.io/api/v1/stock/metric?symbol={}&metric={}&token={}",
+            symbol, metric, self.api_key
+        );
 
-    //     let url = Url::parse(&*url)?;
-    //     let res = reqwest::get(url).await?.json::<BasicFinancials>().await?;
+        let url = Url::parse(&*url)?;
+        let res = reqwest::get(url).await?.json::<BasicFinancials>().await?;
 
-    //     Ok(res)
-    // }
+        Ok(res)
+    }
 }

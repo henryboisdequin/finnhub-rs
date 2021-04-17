@@ -100,15 +100,14 @@ mod test {
         println!("{:#?}", res);
     }
 
-    // #[tokio::test]
-    // async fn basic_financials_test() {
-    //     // TODO: error
-    //     let test_api_key = get_test_api_key();
-    //     let client = Client::new(test_api_key);
-    //     let res = client
-    //         .basic_financials("NFLX".to_string(), "all".to_string())
-    //         .await
-    //         .unwrap();
-    //     println!("{:#?}", res);
-    // }
+    #[tokio::test]
+    async fn basic_financials_test() {
+        let test_api_key = get_test_api_key();
+        let client = Client::new(test_api_key);
+        let res = client
+            .basic_financials("NFLX".to_string(), "all".to_string())
+            .await
+            .unwrap();
+        println!("{:#?}", res);
+    }
 }
