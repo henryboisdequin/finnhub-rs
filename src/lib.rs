@@ -9,7 +9,7 @@
 //!
 //! fn main() {
 //!   // Create a new finnhub client.
-//!   let client = Client::new("MY FINNHUB API KEY".to_string());
+//!   let client = Client::v1("MY FINNHUB API KEY".to_string());
 //!    // Get a list of supported stocks given the exchange.
 //!    let res = client.stock_symbol("US".to_string()).await.unwrap();
 //!    // Print out the results.
