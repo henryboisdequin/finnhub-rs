@@ -28,6 +28,7 @@ pub mod client;
 /// All return types for all Finnhub-rs client methods.
 pub mod types;
 mod utils;
+mod url_builder;
 
 #[cfg(test)]
 mod test {
@@ -118,7 +119,7 @@ mod test {
         let test_api_key = get_test_api_key();
         let client = Client::new(test_api_key);
         let res = client
-            .basic_financials("NFLX".to_string(), "all".to_string())
+            .basic_financials("NFLX".to_string())
             .await
             .unwrap();
         println!("{:#?}", res);
