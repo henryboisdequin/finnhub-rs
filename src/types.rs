@@ -13,7 +13,8 @@ pub struct Results {
     pub description: String,
     pub displaySymbol: String,
     pub symbol: String,
-    pub r#type: String,
+    #[serde(rename = "type")]
+    pub _type: String,
 }
 
 #[derive(Serialize, Deserialize, Debug)]
@@ -21,7 +22,8 @@ pub struct StockSymbol {
     pub description: String,
     pub displaySymbol: String,
     pub symbol: String,
-    pub r#type: String,
+    #[serde(rename = "type")]
+    pub _type: String,
     pub mic: String,
     pub figi: String,
     pub currency: String,
