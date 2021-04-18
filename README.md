@@ -9,10 +9,16 @@ Rust client for the [Finnhub API](https://finnhub.io/). Finnhub is a new Stock A
 ```rust
 // Use finnhub-rs client.
 use finnhub_rs::client::Client;
+use dotenv::dotenv;
+use std::env;
 
-fn main() {
+#[tokio::main]
+async fn main() {
+    dotenv().ok();
+    let key = "TEST_API_KEY";
+    let api_key = env::var(key).expect("Key, value pair not present in .env file");
     // Create a new finnhub client.
-    let client = Client::new("MY FINNHUB API KEY".to_string());
+    let client = Client::new(api_key);
     // Get a list of supported stocks given the exchange.
     let res = client.stock_symbol("US".to_string()).await.unwrap();
     // Print out the results.
