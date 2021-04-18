@@ -4,19 +4,24 @@
 //!
 //! Minimal Example:
 //! ```rust
-//! // Use finnhub-rs client.
-//! use finnhub_rs::client::Client;
-//!
-//! fn main() {
-//!   // Create a new finnhub client.
-//!   let client = Client::new("MY FINNHUB API KEY".to_string());
-//!    // Get a list of supported stocks given the exchange.
-//!    let res = client.stock_symbol("US".to_string()).await.unwrap();
-//!    // Print out the results.
-//!    println!("{:#?}", res);
+//! # // Use finnhub-rs client.
+//! # use finnhub_rs::client::Client;
+//! # use dotenv::dotenv;
+//! # use std::env;
+//! #
+//! # #[tokio::main]
+//! # async fn main() {
+//! #   dotenv().ok();
+//! #   let key = "TEST_API_KEY";
+//! #   let api_key = env::var(key).expect("Key, value pair not present in .env file");
+//!     // Create a new finnhub client.
+//!     let client = Client::new(api_key);
+//!     // Get a list of supported stocks given the exchange.
+//!     let res = client.stock_symbol("US".to_string()).await.unwrap();
+//!     // Print out the results.
+//!     println!("{:#?}", res);
 //!}
 //!```
-//!
 
 /// Finnhub-rs client which is initialized with an API key.
 pub mod client;
@@ -98,6 +103,14 @@ mod test {
         let client = Client::new(test_api_key);
         let res = client.peers("MCD".to_string()).await.unwrap();
         println!("{:#?}", res);
+    }
+
+    #[tokio::test]
+    async fn quote_test() {
+        let test_api_key = get_test_api_key();
+        let client = Client::new(test_api_key);
+        let res = client.quote("TSLA".to_string()).await.unwrap();
+        println!("{:#?}", res)
     }
 
     #[tokio::test]
