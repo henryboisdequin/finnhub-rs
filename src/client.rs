@@ -11,7 +11,7 @@ use serde::de::DeserializeOwned;
 pub struct Client {
     /// API key from the Finnhub dashboard.
     pub api_key: String,
-    /// Constructs urls from root, endpoints, params
+    /// Constructs urls from root, endpoints, params.
     url_bldr: UrlBuilder,
 }
 
@@ -117,7 +117,7 @@ impl Client {
 
     /// Returns the basic financials of the company specified according to the given metric.
     /// https://finnhub.io/docs/api/company-basic-financials
-    pub async fn basic_financials(&self, symbol: String, ) -> Result<BasicFinancials, ExitFailure> {
+    pub async fn basic_financials(&self, symbol: String) -> Result<BasicFinancials, ExitFailure> {
         self.get::<BasicFinancials>(
             "stock/metric",
             &vec![("symbol", &symbol), ("metric", "all"), ("token", &self.api_key)]
