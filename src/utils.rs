@@ -1,8 +1,8 @@
-use dotenv::dotenv;
-use std::env;
-
-#[allow(dead_code)]
+#[cfg(test)]
 pub fn get_test_api_key() -> String {
+    use dotenv::dotenv;
+    use std::env;
+
     dotenv().ok();
 
     let key = "TEST_API_KEY";
