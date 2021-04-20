@@ -1,4 +1,3 @@
-name: PR to main branch updated
 on:
   pull_request:
     types: [opened, synchronize]
@@ -7,9 +6,22 @@ jobs:
   Build-Test:
     runs-on: ubuntu-latest
     if: ${{ github.base_ref == 'main' }}
+    environment: build_test
+
     steps:
       - uses: actions/checkout@v2
       - uses: actions-rs/toolchain@v1
         with:
           toolchain: stable
-      - run: cargo build --release --all-features
+
+      - name: Build all products
+        run: cargo build --release --all-features
+
+      - name: Run all tests
+        run: cargo test --all --release
+        # Testing requires adding a 'secret' to repo: https://docs.gitHub.com/en/actions/reference/encrypted-secrets
+        # Github -> Repo -> Settings Tab -> Environments -> New environment -> Create env secret for TEST_API_KEY
+        # New environment name must match the above environment name, since that's how environments are referenced.
+        env:
+          TEST_API_KEY: ${{ secrets.TEST_API_KEY }}
+
