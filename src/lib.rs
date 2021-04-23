@@ -35,7 +35,7 @@ mod test {
     // `cargo t -- --nocapture` to test
     use super::client::*;
     use super::utils::*;
-    use crate::types::{MarketNewsCategory, Profile2Param};
+    use crate::types::{MarketNewsCategory, ProfileToParam};
 
     #[test]
     fn create_client() {
@@ -64,7 +64,7 @@ mod test {
     async fn company_profile2_symbol_test() {
         let test_api_key = get_test_api_key();
         let client = Client::new(test_api_key);
-        let res = client.company_profile2(Profile2Param::Symbol, "TSLA".into()).await.unwrap();
+        let res = client.company_profile2(ProfileToParam::Symbol, "TSLA".into()).await.unwrap();
         println!("{:#?}", res);
     }
 
@@ -72,7 +72,7 @@ mod test {
     async fn company_profile2_isin_test() {
         let test_api_key = get_test_api_key();
         let client = Client::new(test_api_key);
-        let res = client.company_profile2(Profile2Param::ISIN, "US5949181045".into()).await.unwrap();
+        let res = client.company_profile2(ProfileToParam::ISIN, "US5949181045".into()).await.unwrap();
         println!("{:#?}", res);
     }
 
@@ -80,7 +80,7 @@ mod test {
     async fn company_profile2_cusip_test() {
         let test_api_key = get_test_api_key();
         let client = Client::new(test_api_key);
-        let res = client.company_profile2(Profile2Param::CUSIP, "023135106".into()).await.unwrap();
+        let res = client.company_profile2(ProfileToParam::CUSIP, "023135106".into()).await.unwrap();
         println!("{:#?}", res);
     }
 

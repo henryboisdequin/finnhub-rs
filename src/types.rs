@@ -333,28 +333,28 @@ impl std::fmt::Display for MarketNewsCategory {
     }
 }
 #[derive(Debug)]
-pub enum Profile2Param {
+pub enum ProfileToParam {
     Symbol,
     ISIN,
     CUSIP,
 }
 
-impl From<Profile2Param> for String {
-    fn from(param: Profile2Param) -> String {
+impl From<ProfileToParam> for String {
+    fn from(param: ProfileToParam) -> String {
         match param {
-            Profile2Param::Symbol => "symbol",
-            Profile2Param::ISIN => "isin",
-            Profile2Param::CUSIP => "cusip",
+            ProfileToParam::Symbol => "symbol",
+            ProfileToParam::ISIN => "isin",
+            ProfileToParam::CUSIP => "cusip",
         }.to_string()
     }
 }
 
-impl std::fmt::Display for Profile2Param {
+impl std::fmt::Display for ProfileToParam {
     fn fmt(&self, fmt: &mut std::fmt::Formatter<'_>) -> std::fmt::Result {
         fmt.write_str(match *self {
-            Profile2Param::Symbol => "symbol",
-            Profile2Param::ISIN => "isin",
-            Profile2Param::CUSIP => "cusip",
+            ProfileToParam::Symbol => "symbol",
+            ProfileToParam::ISIN => "isin",
+            ProfileToParam::CUSIP => "cusip",
         })?;
         Ok(())
     }
