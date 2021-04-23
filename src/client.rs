@@ -60,12 +60,12 @@ impl Client {
 
     /// Returns the latest market news in the given category.
     /// https://finnhub.io/docs/api/market-news
-    /// TODO: validate category is one of [general, forex, crypto, merger]
-    /// TODO: support option param: minId
-    pub async fn market_news(&self, category: String) -> Result<Vec<MarketNews>, ExitFailure> {
+    pub async fn market_news(&self, category: MarketNewsCategory, min_id: Option<u64>) -> Result<Vec<MarketNews>, ExitFailure> {
+        let mut params = vec![("category", category.into())];
+        if let Some(min_id) = min_id { params.push(("minId", min_id.to_string())); }
         self.get::<Vec<MarketNews>>(
             "news",
-            &mut vec![("category", category)],
+            &mut params,
         ).await
     }
 

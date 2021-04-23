@@ -300,3 +300,34 @@ pub struct Metric {
     pub totalDebtCagr5Y: Option<f64>,
     pub yearToDatePriceReturnDaily: Option<f64>,
 }
+
+#[derive(Debug)]
+pub enum MarketNewsCategory {
+    General,
+    Forex,
+    Crypto,
+    Merger,
+}
+
+impl From<MarketNewsCategory> for String {
+    fn from(category: MarketNewsCategory) -> String {
+        match category {
+            MarketNewsCategory::General => "general",
+            MarketNewsCategory::Forex => "forex",
+            MarketNewsCategory::Crypto => "crypto",
+            MarketNewsCategory::Merger => "merger",
+        }.to_string()
+    }
+}
+
+impl std::fmt::Display for MarketNewsCategory {
+    fn fmt(&self, fmt: &mut std::fmt::Formatter<'_>) -> std::fmt::Result {
+        fmt.write_str(match *self {
+            MarketNewsCategory::General => "general",
+            MarketNewsCategory::Forex => "forex",
+            MarketNewsCategory::Crypto => "crypto",
+            MarketNewsCategory::Merger => "merger",
+        })?;
+        Ok(())
+    }
+}

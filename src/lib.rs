@@ -35,6 +35,7 @@ mod test {
     // `cargo t -- --nocapture` to test
     use super::client::*;
     use super::utils::*;
+    use crate::types::MarketNewsCategory;
 
     #[test]
     fn create_client() {
@@ -68,10 +69,34 @@ mod test {
     }
 
     #[tokio::test]
-    async fn market_news_test() {
+    async fn market_news_general_test() {
         let test_api_key = get_test_api_key();
         let client = Client::new(test_api_key);
-        let res = client.market_news("business".to_string()).await.unwrap();
+        let res = client.market_news(MarketNewsCategory::General, None).await.unwrap();
+        println!("{:#?}", res);
+    }
+
+    #[tokio::test]
+    async fn market_news_forex_test() {
+        let test_api_key = get_test_api_key();
+        let client = Client::new(test_api_key);
+        let res = client.market_news(MarketNewsCategory::Forex, None).await.unwrap();
+        println!("{:#?}", res);
+    }
+
+    #[tokio::test]
+    async fn market_news_crypto_test() {
+        let test_api_key = get_test_api_key();
+        let client = Client::new(test_api_key);
+        let res = client.market_news(MarketNewsCategory::Crypto, None).await.unwrap();
+        println!("{:#?}", res);
+    }
+
+    #[tokio::test]
+    async fn market_news_merger_test() {
+        let test_api_key = get_test_api_key();
+        let client = Client::new(test_api_key);
+        let res = client.market_news(MarketNewsCategory::Merger, None).await.unwrap();
         println!("{:#?}", res);
     }
 
