@@ -40,11 +40,18 @@ impl Client {
 
     /// Returns a list of supported stocks given the exchange.
     /// https://finnhub.io/docs/api/stock-symbols
-    /// TODO: support optional params: mic, securityType, currency
-    pub async fn stock_symbol(&self, exchange: String) -> Result<Vec<StockSymbol>, ExitFailure> {
+    pub async fn stock_symbol(&self,
+                              exchange: String,
+                              mic: Option<String>,
+                              security_type: Option<String>,
+                              currency: Option<String>) -> Result<Vec<StockSymbol>, ExitFailure> {
+        let mut params = vec![("exchange", exchange)];
+        if let Some(mic) = mic { params.push(("mic", mic)); }
+        if let Some(security_type) = security_type { params.push(("security_type", security_type)); }
+        if let Some(currency) = currency { params.push(("currency", currency)); }
         self.get::<Vec<StockSymbol>>(
             "stock/symbol",
-            &mut vec![("exchange", exchange)],
+            &mut params,
         ).await
     }
 

@@ -56,7 +56,7 @@ mod test {
     async fn stock_symbol_test() {
         let test_api_key = get_test_api_key();
         let client = Client::new(test_api_key);
-        let res = client.stock_symbol("US".into()).await.unwrap();
+        let res = client.stock_symbol("US".into(), None, None, None).await.unwrap();
         println!("{:#?}", res);
     }
 
