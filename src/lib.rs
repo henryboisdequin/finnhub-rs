@@ -17,7 +17,7 @@
 //!     // Create a new finnhub client.
 //!     let client = Client::new(api_key);
 //!     // Get a list of supported stocks given the exchange.
-//!     let res = client.stock_symbol("US".to_string()).await.unwrap();
+//!     let res = client.stock_symbol("US".into()).await.unwrap();
 //!     // Print out the results.
 //!     println!("{:#?}", res);
 //!}
@@ -47,7 +47,7 @@ mod test {
     async fn symbol_lookup_test() {
         let test_api_key = get_test_api_key();
         let client = Client::new(test_api_key);
-        let res = client.symbol_lookup("AAPL".to_string()).await.unwrap();
+        let res = client.symbol_lookup("AAPL".into()).await.unwrap();
         println!("{:#?}", res);
     }
 
@@ -55,7 +55,7 @@ mod test {
     async fn stock_symbol_test() {
         let test_api_key = get_test_api_key();
         let client = Client::new(test_api_key);
-        let res = client.stock_symbol("US".to_string()).await.unwrap();
+        let res = client.stock_symbol("US".into()).await.unwrap();
         println!("{:#?}", res);
     }
 
@@ -63,7 +63,7 @@ mod test {
     async fn company_profile2_test() {
         let test_api_key = get_test_api_key();
         let client = Client::new(test_api_key);
-        let res = client.company_profile2("TSLA".to_string()).await.unwrap();
+        let res = client.company_profile2("TSLA".into()).await.unwrap();
         println!("{:#?}", res);
     }
 
@@ -81,9 +81,9 @@ mod test {
         let client = Client::new(test_api_key);
         let res = client
             .company_news(
-                "GOOGL".to_string(),
-                "2020-12-10".to_string(),
-                "2021-01-10".to_string(),
+                "GOOGL".into(),
+                "2020-12-10".into(),
+                "2021-01-10".into(),
             )
             .await
             .unwrap();
@@ -94,7 +94,7 @@ mod test {
     async fn news_sentiment_test() {
         let test_api_key = get_test_api_key();
         let client = Client::new(test_api_key);
-        let res = client.news_sentiment("FB".to_string()).await.unwrap();
+        let res = client.news_sentiment("FB".into()).await.unwrap();
         println!("{:#?}", res);
     }
 
@@ -102,7 +102,7 @@ mod test {
     async fn peers_test() {
         let test_api_key = get_test_api_key();
         let client = Client::new(test_api_key);
-        let res = client.peers("MCD".to_string()).await.unwrap();
+        let res = client.peers("MCD".into()).await.unwrap();
         println!("{:#?}", res);
     }
 
@@ -110,7 +110,7 @@ mod test {
     async fn quote_test() {
         let test_api_key = get_test_api_key();
         let client = Client::new(test_api_key);
-        let res = client.quote("TSLA".to_string()).await.unwrap();
+        let res = client.quote("TSLA".into()).await.unwrap();
         println!("{:#?}", res)
     }
 
@@ -119,7 +119,7 @@ mod test {
         let test_api_key = get_test_api_key();
         let client = Client::new(test_api_key);
         let res = client
-            .basic_financials("NFLX".to_string())
+            .basic_financials("NFLX".into())
             .await
             .unwrap();
         println!("{:#?}", res);
