@@ -1,6 +1,7 @@
 #![allow(non_snake_case, missing_docs)]
 
 use serde_derive::{Deserialize, Serialize};
+use strum_macros::Display;
 
 #[derive(Serialize, Deserialize, Debug)]
 pub struct SymbolLookup {
@@ -301,61 +302,24 @@ pub struct Metric {
     pub yearToDatePriceReturnDaily: Option<f64>,
 }
 
-// TODO: Is there a macro we could make to automate From/Display traits?
-#[derive(Debug)]
+#[derive(Display, Debug)]
 pub enum MarketNewsCategory {
+    #[strum(serialize = "general")]
     General,
+    #[strum(serialize = "forex")]
     Forex,
+    #[strum(serialize = "crypto")]
     Crypto,
+    #[strum(serialize = "merger")]
     Merger,
 }
 
-impl From<MarketNewsCategory> for String {
-    fn from(category: MarketNewsCategory) -> String {
-        match category {
-            MarketNewsCategory::General => "general",
-            MarketNewsCategory::Forex => "forex",
-            MarketNewsCategory::Crypto => "crypto",
-            MarketNewsCategory::Merger => "merger",
-        }.to_string()
-    }
-}
-
-impl std::fmt::Display for MarketNewsCategory {
-    fn fmt(&self, fmt: &mut std::fmt::Formatter<'_>) -> std::fmt::Result {
-        fmt.write_str(match *self {
-            MarketNewsCategory::General => "general",
-            MarketNewsCategory::Forex => "forex",
-            MarketNewsCategory::Crypto => "crypto",
-            MarketNewsCategory::Merger => "merger",
-        })?;
-        Ok(())
-    }
-}
-#[derive(Debug)]
+#[derive(Display, Debug)]
 pub enum ProfileToParam {
+    #[strum(serialize = "symbol")]
     Symbol,
+    #[strum(serialize = "isin")]
     ISIN,
+    #[strum(serialize = "cusip")]
     CUSIP,
-}
-
-impl From<ProfileToParam> for String {
-    fn from(param: ProfileToParam) -> String {
-        match param {
-            ProfileToParam::Symbol => "symbol",
-            ProfileToParam::ISIN => "isin",
-            ProfileToParam::CUSIP => "cusip",
-        }.to_string()
-    }
-}
-
-impl std::fmt::Display for ProfileToParam {
-    fn fmt(&self, fmt: &mut std::fmt::Formatter<'_>) -> std::fmt::Result {
-        fmt.write_str(match *self {
-            ProfileToParam::Symbol => "symbol",
-            ProfileToParam::ISIN => "isin",
-            ProfileToParam::CUSIP => "cusip",
-        })?;
-        Ok(())
-    }
 }

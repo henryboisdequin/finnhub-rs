@@ -68,7 +68,7 @@ impl Client {
     /// Returns the latest market news in the given category.
     /// https://finnhub.io/docs/api/market-news
     pub async fn market_news(&self, category: MarketNewsCategory, min_id: Option<u64>) -> Result<Vec<MarketNews>, ExitFailure> {
-        let mut params = vec![("category", category.into())];
+        let mut params = vec![("category", category.to_string())];
         Client::maybe_add(&mut params, "minId", min_id);
         self.get::<Vec<MarketNews>>(
             "news",
