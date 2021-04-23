@@ -50,11 +50,11 @@ impl Client {
 
     /// Returns the profile of the company specified.
     /// https://finnhub.io/docs/api/company-profile2
-    /// TODO: support optional params: symbol, isin, cusip
-    pub async fn company_profile2(&self, symbol: String) -> Result<CompanyProfile, ExitFailure> {
+    pub async fn company_profile2(&self, key: Profile2Param, value: String) -> Result<CompanyProfile, ExitFailure> {
+        let key = key.to_string();
         self.get::<CompanyProfile>(
             "stock/profile2",
-            &mut vec![("symbol", symbol)],
+            &mut vec![(&key, value)],
         ).await
     }
 

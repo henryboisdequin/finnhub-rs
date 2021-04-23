@@ -301,6 +301,7 @@ pub struct Metric {
     pub yearToDatePriceReturnDaily: Option<f64>,
 }
 
+// TODO: Is there a macro we could make to automate From/Display traits?
 #[derive(Debug)]
 pub enum MarketNewsCategory {
     General,
@@ -327,6 +328,33 @@ impl std::fmt::Display for MarketNewsCategory {
             MarketNewsCategory::Forex => "forex",
             MarketNewsCategory::Crypto => "crypto",
             MarketNewsCategory::Merger => "merger",
+        })?;
+        Ok(())
+    }
+}
+#[derive(Debug)]
+pub enum Profile2Param {
+    Symbol,
+    ISIN,
+    CUSIP,
+}
+
+impl From<Profile2Param> for String {
+    fn from(param: Profile2Param) -> String {
+        match param {
+            Profile2Param::Symbol => "symbol",
+            Profile2Param::ISIN => "isin",
+            Profile2Param::CUSIP => "cusip",
+        }.to_string()
+    }
+}
+
+impl std::fmt::Display for Profile2Param {
+    fn fmt(&self, fmt: &mut std::fmt::Formatter<'_>) -> std::fmt::Result {
+        fmt.write_str(match *self {
+            Profile2Param::Symbol => "symbol",
+            Profile2Param::ISIN => "isin",
+            Profile2Param::CUSIP => "cusip",
         })?;
         Ok(())
     }
