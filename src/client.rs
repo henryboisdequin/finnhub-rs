@@ -34,38 +34,45 @@ impl Client {
     pub async fn symbol_lookup(&self, query: String) -> Result<SymbolLookup, ExitFailure> {
         self.get::<SymbolLookup>(
             "search",
-            &vec![("q", &query), ("token", &self.api_key)]
+            &mut vec![("q", query)],
         ).await
     }
 
     /// Returns a list of supported stocks given the exchange.
     /// https://finnhub.io/docs/api/stock-symbols
-    /// TODO: support optional params: mic, securityType, currency
-    pub async fn stock_symbol(&self, exchange: String) -> Result<Vec<StockSymbol>, ExitFailure> {
+    pub async fn stock_symbol(&self,
+                              exchange: String,
+                              mic: Option<String>,
+                              security_type: Option<String>,
+                              currency: Option<String>) -> Result<Vec<StockSymbol>, ExitFailure> {
+        let mut params = vec![("exchange", exchange)];
+        Client::maybe_add(&mut params, "mic", mic);
+        Client::maybe_add(&mut params, "security_type", security_type);
+        Client::maybe_add(&mut params, "currency", currency);
         self.get::<Vec<StockSymbol>>(
             "stock/symbol",
-            &vec![("exchange", &exchange), ("token", &self.api_key)],
+            &mut params,
         ).await
     }
 
     /// Returns the profile of the company specified.
     /// https://finnhub.io/docs/api/company-profile2
-    /// TODO: support optional params: symbol, isin, cusip
-    pub async fn company_profile2(&self, symbol: String) -> Result<CompanyProfile, ExitFailure> {
+    pub async fn company_profile2(&self, key: ProfileToParam, value: String) -> Result<CompanyProfile, ExitFailure> {
+        let key = key.to_string();
         self.get::<CompanyProfile>(
             "stock/profile2",
-            &vec![("symbol", &symbol), ("token", &self.api_key)]
+            &mut vec![(&key, value)],
         ).await
     }
 
     /// Returns the latest market news in the given category.
     /// https://finnhub.io/docs/api/market-news
-    /// TODO: validate category is one of [general, forex, crypto, merger]
-    /// TODO: support option param: minId
-    pub async fn market_news(&self, category: String) -> Result<Vec<MarketNews>, ExitFailure> {
+    pub async fn market_news(&self, category: MarketNewsCategory, min_id: Option<u64>) -> Result<Vec<MarketNews>, ExitFailure> {
+        let mut params = vec![("category", category.into())];
+        Client::maybe_add(&mut params, "minId", min_id);
         self.get::<Vec<MarketNews>>(
             "news",
-            &vec![("category", &category), ("token", &self.api_key)]
+            &mut params,
         ).await
     }
 
@@ -79,11 +86,10 @@ impl Client {
     ) -> Result<Vec<CompanyNews>, ExitFailure> {
         self.get::<Vec<CompanyNews>>(
             "company-news",
-            &vec![
-                ("symbol", &symbol),
-                ("from", &from),
-                ("to", &to),
-                ("token", &self.api_key)
+            &mut vec![
+                ("symbol", symbol),
+                ("from", from),
+                ("to", to),
             ]
         ).await
     }
@@ -93,7 +99,7 @@ impl Client {
     pub async fn news_sentiment(&self, symbol: String) -> Result<NewsSentiment, ExitFailure> {
         self.get::<NewsSentiment>(
             "news-sentiment",
-            &vec![("symbol", &symbol), ("token", &self.api_key)]
+            &mut vec![("symbol", symbol)],
         ).await
     }
 
@@ -102,7 +108,7 @@ impl Client {
     pub async fn peers(&self, symbol: String) -> Result<Vec<String>, ExitFailure> {
         self.get::<Vec<String>>(
             "stock/peers",
-            &vec![("symbol", &symbol), ("token", &self.api_key)]
+            &mut vec![("symbol", symbol)],
         ).await
     }
 
@@ -111,7 +117,7 @@ impl Client {
     pub async fn quote(&self, symbol: String) -> Result<CompanyQuote, ExitFailure> {
         self.get::<CompanyQuote>(
             "quote",
-            &vec![("symbol", &symbol), ("token", &self.api_key)]
+            &mut vec![("symbol", symbol)],
         ).await
     }
 
@@ -120,7 +126,7 @@ impl Client {
     pub async fn basic_financials(&self, symbol: String) -> Result<BasicFinancials, ExitFailure> {
         self.get::<BasicFinancials>(
             "stock/metric",
-            &vec![("symbol", &symbol), ("metric", "all"), ("token", &self.api_key)]
+            &mut vec![("symbol", symbol), ("metric", "all".into())],
         ).await
     }
 
@@ -128,11 +134,16 @@ impl Client {
     pub async fn get<T: DeserializeOwned>(
         &self,
         endpoint: &str,
-        params: &Vec<(&str, &str)>
+        params: &mut Vec<(&str, String)>
     ) -> Result<T, ExitFailure> {
+        params.push(("token", self.api_key.clone()));
         let url_str = self.url_bldr.url(endpoint, params);
         let url = Url::parse(&url_str)?;
         let res = reqwest::get(url).await?.json::<T>().await?;
         Ok(res)
+    }
+
+    fn maybe_add<'a, T: std::fmt::Display>(params: &mut Vec<(&'a str, String)>, param: &'a str, value: Option<T>) {
+        if let Some(value) = value { params.push((param, format!("{}", value))); }
     }
 }

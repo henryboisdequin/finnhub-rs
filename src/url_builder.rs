@@ -9,11 +9,11 @@ impl UrlBuilder {
         Self { root: root.to_string() }
     }
 
-    pub fn url(&self, endpoint: &str, params: &Vec<(&str, &str)>) -> String {
+    pub fn url(&self, endpoint: &str, params: &Vec<(&str, String)>) -> String {
         format!("{}/{}?{}", &self.root, endpoint, UrlBuilder::join_params(params))
     }
 
-    fn join_params(params: &Vec<(&str, &str)>) -> String {
+    fn join_params(params: &Vec<(&str, String)>) -> String {
         if params.is_empty() {
             "".to_string()
         } else {
@@ -37,10 +37,10 @@ mod test {
         let root = "https://finnhub.io/api/v1";
         let endpoint = "company-news";
         let params = vec![
-            ("symbol", "GOOGL"),
-            ("from", "2020-12-10"),
-            ("to", "2021-01-10"),
-            ("token", token),
+            ("symbol", "GOOGL".into()),
+            ("from", "2020-12-10".into()),
+            ("to", "2021-01-10".into()),
+            ("token", token.to_string()),
         ];
         let pstr = "symbol=GOOGL&from=2020-12-10&to=2021-01-10&";
 
@@ -54,10 +54,10 @@ mod test {
     fn gen_param_str() {
         let token = "abc123";
         let params = vec![
-            ("symbol", "GOOGL"),
-            ("from", "2020-12-10"),
-            ("to", "2021-01-10"),
-            ("token", token),
+            ("symbol", "GOOGL".into()),
+            ("from", "2020-12-10".into()),
+            ("to", "2021-01-10".into()),
+            ("token", token.to_string()),
         ];
         let expected = format!("symbol=GOOGL&from=2020-12-10&to=2021-01-10&token={}", token);
         let actual = UrlBuilder::join_params(&params);

@@ -17,7 +17,7 @@
 //!     // Create a new finnhub client.
 //!     let client = Client::new(api_key);
 //!     // Get a list of supported stocks given the exchange.
-//!     let res = client.stock_symbol("US".to_string()).await.unwrap();
+//!     let res = client.stock_symbol("US".into()).await.unwrap();
 //!     // Print out the results.
 //!     println!("{:#?}", res);
 //!}
@@ -35,6 +35,7 @@ mod test {
     // `cargo t -- --nocapture` to test
     use super::client::*;
     use super::utils::*;
+    use crate::types::{MarketNewsCategory, ProfileToParam};
 
     #[test]
     fn create_client() {
@@ -47,7 +48,7 @@ mod test {
     async fn symbol_lookup_test() {
         let test_api_key = get_test_api_key();
         let client = Client::new(test_api_key);
-        let res = client.symbol_lookup("AAPL".to_string()).await.unwrap();
+        let res = client.symbol_lookup("AAPL".into()).await.unwrap();
         println!("{:#?}", res);
     }
 
@@ -55,23 +56,63 @@ mod test {
     async fn stock_symbol_test() {
         let test_api_key = get_test_api_key();
         let client = Client::new(test_api_key);
-        let res = client.stock_symbol("US".to_string()).await.unwrap();
+        let res = client.stock_symbol("US".into(), None, None, None).await.unwrap();
         println!("{:#?}", res);
     }
 
     #[tokio::test]
-    async fn company_profile2_test() {
+    async fn company_profile2_symbol_test() {
         let test_api_key = get_test_api_key();
         let client = Client::new(test_api_key);
-        let res = client.company_profile2("TSLA".to_string()).await.unwrap();
+        let res = client.company_profile2(ProfileToParam::Symbol, "TSLA".into()).await.unwrap();
         println!("{:#?}", res);
     }
 
     #[tokio::test]
-    async fn market_news_test() {
+    async fn company_profile2_isin_test() {
         let test_api_key = get_test_api_key();
         let client = Client::new(test_api_key);
-        let res = client.market_news("business".to_string()).await.unwrap();
+        let res = client.company_profile2(ProfileToParam::ISIN, "US5949181045".into()).await.unwrap();
+        println!("{:#?}", res);
+    }
+
+    #[tokio::test]
+    async fn company_profile2_cusip_test() {
+        let test_api_key = get_test_api_key();
+        let client = Client::new(test_api_key);
+        let res = client.company_profile2(ProfileToParam::CUSIP, "023135106".into()).await.unwrap();
+        println!("{:#?}", res);
+    }
+
+    #[tokio::test]
+    async fn market_news_general_test() {
+        let test_api_key = get_test_api_key();
+        let client = Client::new(test_api_key);
+        let res = client.market_news(MarketNewsCategory::General, None).await.unwrap();
+        println!("{:#?}", res);
+    }
+
+    #[tokio::test]
+    async fn market_news_forex_test() {
+        let test_api_key = get_test_api_key();
+        let client = Client::new(test_api_key);
+        let res = client.market_news(MarketNewsCategory::Forex, None).await.unwrap();
+        println!("{:#?}", res);
+    }
+
+    #[tokio::test]
+    async fn market_news_crypto_test() {
+        let test_api_key = get_test_api_key();
+        let client = Client::new(test_api_key);
+        let res = client.market_news(MarketNewsCategory::Crypto, None).await.unwrap();
+        println!("{:#?}", res);
+    }
+
+    #[tokio::test]
+    async fn market_news_merger_test() {
+        let test_api_key = get_test_api_key();
+        let client = Client::new(test_api_key);
+        let res = client.market_news(MarketNewsCategory::Merger, None).await.unwrap();
         println!("{:#?}", res);
     }
 
@@ -81,9 +122,9 @@ mod test {
         let client = Client::new(test_api_key);
         let res = client
             .company_news(
-                "GOOGL".to_string(),
-                "2020-12-10".to_string(),
-                "2021-01-10".to_string(),
+                "GOOGL".into(),
+                "2020-12-10".into(),
+                "2021-01-10".into(),
             )
             .await
             .unwrap();
@@ -94,7 +135,7 @@ mod test {
     async fn news_sentiment_test() {
         let test_api_key = get_test_api_key();
         let client = Client::new(test_api_key);
-        let res = client.news_sentiment("FB".to_string()).await.unwrap();
+        let res = client.news_sentiment("FB".into()).await.unwrap();
         println!("{:#?}", res);
     }
 
@@ -102,7 +143,7 @@ mod test {
     async fn peers_test() {
         let test_api_key = get_test_api_key();
         let client = Client::new(test_api_key);
-        let res = client.peers("MCD".to_string()).await.unwrap();
+        let res = client.peers("MCD".into()).await.unwrap();
         println!("{:#?}", res);
     }
 
@@ -110,7 +151,7 @@ mod test {
     async fn quote_test() {
         let test_api_key = get_test_api_key();
         let client = Client::new(test_api_key);
-        let res = client.quote("TSLA".to_string()).await.unwrap();
+        let res = client.quote("TSLA".into()).await.unwrap();
         println!("{:#?}", res)
     }
 
@@ -119,7 +160,7 @@ mod test {
         let test_api_key = get_test_api_key();
         let client = Client::new(test_api_key);
         let res = client
-            .basic_financials("NFLX".to_string())
+            .basic_financials("NFLX".into())
             .await
             .unwrap();
         println!("{:#?}", res);
