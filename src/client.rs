@@ -34,7 +34,7 @@ impl Client {
     pub async fn symbol_lookup(&self, query: String) -> Result<SymbolLookup, ExitFailure> {
         self.get::<SymbolLookup>(
             "search",
-            &vec![("q", query), ("token", self.api_key.clone())]
+            &mut vec![("q", query)],
         ).await
     }
 
@@ -44,7 +44,7 @@ impl Client {
     pub async fn stock_symbol(&self, exchange: String) -> Result<Vec<StockSymbol>, ExitFailure> {
         self.get::<Vec<StockSymbol>>(
             "stock/symbol",
-            &vec![("exchange", exchange), ("token", self.api_key.clone())],
+            &mut vec![("exchange", exchange)],
         ).await
     }
 
@@ -54,7 +54,7 @@ impl Client {
     pub async fn company_profile2(&self, symbol: String) -> Result<CompanyProfile, ExitFailure> {
         self.get::<CompanyProfile>(
             "stock/profile2",
-            &vec![("symbol", symbol), ("token", self.api_key.clone())]
+            &mut vec![("symbol", symbol)],
         ).await
     }
 
@@ -65,7 +65,7 @@ impl Client {
     pub async fn market_news(&self, category: String) -> Result<Vec<MarketNews>, ExitFailure> {
         self.get::<Vec<MarketNews>>(
             "news",
-            &vec![("category", category), ("token", self.api_key.clone())]
+            &mut vec![("category", category)],
         ).await
     }
 
@@ -79,11 +79,10 @@ impl Client {
     ) -> Result<Vec<CompanyNews>, ExitFailure> {
         self.get::<Vec<CompanyNews>>(
             "company-news",
-            &vec![
+            &mut vec![
                 ("symbol", symbol),
                 ("from", from),
                 ("to", to),
-                ("token", self.api_key.clone())
             ]
         ).await
     }
@@ -93,7 +92,7 @@ impl Client {
     pub async fn news_sentiment(&self, symbol: String) -> Result<NewsSentiment, ExitFailure> {
         self.get::<NewsSentiment>(
             "news-sentiment",
-            &vec![("symbol", symbol), ("token", self.api_key.clone())]
+            &mut vec![("symbol", symbol)],
         ).await
     }
 
@@ -102,7 +101,7 @@ impl Client {
     pub async fn peers(&self, symbol: String) -> Result<Vec<String>, ExitFailure> {
         self.get::<Vec<String>>(
             "stock/peers",
-            &vec![("symbol", symbol), ("token", self.api_key.clone())]
+            &mut vec![("symbol", symbol)],
         ).await
     }
 
@@ -111,7 +110,7 @@ impl Client {
     pub async fn quote(&self, symbol: String) -> Result<CompanyQuote, ExitFailure> {
         self.get::<CompanyQuote>(
             "quote",
-            &vec![("symbol", symbol), ("token", self.api_key.clone())]
+            &mut vec![("symbol", symbol)],
         ).await
     }
 
@@ -120,7 +119,7 @@ impl Client {
     pub async fn basic_financials(&self, symbol: String) -> Result<BasicFinancials, ExitFailure> {
         self.get::<BasicFinancials>(
             "stock/metric",
-            &vec![("symbol", symbol), ("metric", "all".into()), ("token", self.api_key.clone())]
+            &mut vec![("symbol", symbol), ("metric", "all".into())],
         ).await
     }
 
@@ -128,8 +127,9 @@ impl Client {
     pub async fn get<T: DeserializeOwned>(
         &self,
         endpoint: &str,
-        params: &Vec<(&str, String)>
+        params: &mut Vec<(&str, String)>
     ) -> Result<T, ExitFailure> {
+        params.push(("token", self.api_key.clone()));
         let url_str = self.url_bldr.url(endpoint, params);
         let url = Url::parse(&url_str)?;
         let res = reqwest::get(url).await?.json::<T>().await?;
