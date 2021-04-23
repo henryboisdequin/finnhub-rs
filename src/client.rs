@@ -46,9 +46,9 @@ impl Client {
                               security_type: Option<String>,
                               currency: Option<String>) -> Result<Vec<StockSymbol>, ExitFailure> {
         let mut params = vec![("exchange", exchange)];
-        if let Some(mic) = mic { params.push(("mic", mic)); }
-        if let Some(security_type) = security_type { params.push(("security_type", security_type)); }
-        if let Some(currency) = currency { params.push(("currency", currency)); }
+        Client::maybe_add(&mut params, "mic", mic);
+        Client::maybe_add(&mut params, "security_type", security_type);
+        Client::maybe_add(&mut params, "currency", currency);
         self.get::<Vec<StockSymbol>>(
             "stock/symbol",
             &mut params,
@@ -69,7 +69,7 @@ impl Client {
     /// https://finnhub.io/docs/api/market-news
     pub async fn market_news(&self, category: MarketNewsCategory, min_id: Option<u64>) -> Result<Vec<MarketNews>, ExitFailure> {
         let mut params = vec![("category", category.into())];
-        if let Some(min_id) = min_id { params.push(("minId", min_id.to_string())); }
+        Client::maybe_add(&mut params, "minId", min_id);
         self.get::<Vec<MarketNews>>(
             "news",
             &mut params,
@@ -141,5 +141,9 @@ impl Client {
         let url = Url::parse(&url_str)?;
         let res = reqwest::get(url).await?.json::<T>().await?;
         Ok(res)
+    }
+
+    fn maybe_add<'a, T: std::fmt::Display>(params: &mut Vec<(&'a str, String)>, param: &'a str, value: Option<T>) {
+        if let Some(value) = value { params.push((param, format!("{}", value))); }
     }
 }
