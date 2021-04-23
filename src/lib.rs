@@ -17,7 +17,7 @@
 //!     // Create a new finnhub client.
 //!     let client = Client::new(api_key);
 //!     // Get a list of supported stocks given the exchange.
-//!     let res = client.stock_symbol("US".into()).await.unwrap();
+//!     let res = client.stock_symbol("US".into(), None, None, None).await.unwrap();
 //!     // Print out the results.
 //!     println!("{:#?}", res);
 //!}
