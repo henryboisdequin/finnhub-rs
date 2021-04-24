@@ -17,23 +17,6 @@ pub fn get_dummy_api_key() -> String {
 }
 
 #[cfg(test)]
-pub fn url_to_replay_name(url: String, url_root: String) -> String {
-    use regex::Regex;
-
-    // Chop off the root.
-    let root_len = url_root.len() + 1;
-    let rootless_name = &url[root_len..];
-
-    // Replace the token with dummy token.
-    let re = Regex::new(r"token=[0-9A-Za-z]+").unwrap();
-    let dummy_token = format!("token={}", get_dummy_api_key());
-    let name = re.replace_all(rootless_name, dummy_token);
-
-    // Path from root.
-    format!("test/{}.replay", name)
-}
-
-#[cfg(test)]
 pub fn clean_key_from_file(filename: String, key: String) {
     // from: https://stackoverflow.com/questions/27215396/how-to-replace-a-word-in-a-file-in-a-txt
     // Read file.
@@ -51,4 +34,10 @@ pub fn clean_key_from_file(filename: String, key: String) {
     // Rewrite file.
     let mut dst = std::fs::File::create(filename).unwrap();
     dst.write(new_data.as_bytes()).unwrap();
+}
+
+#[cfg(test)]
+pub fn load_expected_from_replay_filename(replay_filename: String) -> String {
+    let expected_filename = replay_filename.replace(".replay", ".expected");
+    std::fs::read_to_string(expected_filename).unwrap().trim().into()
 }

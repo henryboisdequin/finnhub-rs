@@ -9,11 +9,6 @@ impl UrlBuilder {
         Self { root: root.to_string() }
     }
 
-    #[allow(dead_code)]
-    pub fn root(&self) -> String {
-        self.root.clone()
-    }
-
     pub fn url(&self, endpoint: &str, params: &Vec<(&str, String)>) -> String {
         format!("{}/{}?{}", &self.root, endpoint, UrlBuilder::join_params(params))
     }
@@ -28,6 +23,34 @@ impl UrlBuilder {
                 .collect::<Vec<String>>()
                 .join("&")
         }
+    }
+
+    #[cfg(test)]
+    pub fn replay_filename(&self, url: String) -> String {
+        self.test_filename(url, "replay".into())
+    }
+
+    #[cfg(test)]
+    pub fn expected_filename(&self, url: String) -> String {
+        self.test_filename(url, "expected".into())
+    }
+
+    #[cfg(test)]
+    pub fn test_filename(&self, url: String, extension: String) -> String {
+        use regex::Regex;
+        use crate::utils::get_dummy_api_key;
+
+        // Chop off the root.
+        let root_len = self.root.len() + 1; // include '/'
+        let rootless_name = &url[root_len..];
+
+        // Replace the token with dummy token.
+        let re = Regex::new(r"token=[0-9A-Za-z]+").unwrap();
+        let dummy_token = format!("token={}", get_dummy_api_key());
+        let name = re.replace_all(rootless_name, dummy_token);
+
+        // Path from root.
+        format!("test/{}.{}", name, extension)
     }
 }
 

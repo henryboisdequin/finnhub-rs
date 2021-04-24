@@ -52,79 +52,122 @@ mod test {
     async fn symbol_lookup_test() {
         let test_api_key = get_dummy_api_key();
         let client = Client::new(test_api_key);
-        let res = client.symbol_lookup("AAPL".into()).await.unwrap();
-        println!("{:#?}", res);
+        let (obj, url) = client.symbol_lookup("AAPL".into()).await.unwrap();
+
+        let expected_filename = client.url_bldr.expected_filename(url.to_string());
+        let expected = load_expected_from_replay_filename(expected_filename);
+        let actual = format!("{:#?}", obj);
+
+        assert_eq!(actual, expected);
     }
 
     #[tokio::test]
     async fn stock_symbol_test() {
         let test_api_key = get_dummy_api_key();
         let client = Client::new(test_api_key);
-        let res = client.stock_symbol("US".into(), None, None, None).await.unwrap();
-        println!("{:#?}", res);
+        let (obj, _url) = client.stock_symbol("US".into(), None, None, None).await.unwrap();
+
+        // TODO: Figure out a real test. Also, this test always seems to terminate before completion,
+        //       so figure that out.
+        println!("{:#?}", obj);
     }
 
     #[tokio::test]
     async fn company_profile2_symbol_test() {
         let test_api_key = get_dummy_api_key();
         let client = Client::new(test_api_key);
-        let res = client.company_profile2(ProfileToParam::Symbol, "TSLA".into()).await.unwrap();
-        println!("{:#?}", res);
+        let (obj, url) = client.company_profile2(ProfileToParam::Symbol, "TSLA".into()).await.unwrap();
+
+        let expected_filename = client.url_bldr.expected_filename(url.to_string());
+        let expected = load_expected_from_replay_filename(expected_filename);
+        let actual = format!("{:#?}", obj);
+
+        assert_eq!(actual, expected);
     }
 
     #[tokio::test]
     async fn company_profile2_isin_test() {
         let test_api_key = get_dummy_api_key();
         let client = Client::new(test_api_key);
-        let res = client.company_profile2(ProfileToParam::ISIN, "US5949181045".into()).await.unwrap();
-        println!("{:#?}", res);
+        let (obj, url) = client.company_profile2(ProfileToParam::ISIN, "US5949181045".into()).await.unwrap();
+
+        let expected_filename = client.url_bldr.expected_filename(url.to_string());
+        let expected = load_expected_from_replay_filename(expected_filename);
+        let actual = format!("{:#?}", obj);
+
+        assert_eq!(actual, expected);
     }
 
     #[tokio::test]
     async fn company_profile2_cusip_test() {
         let test_api_key = get_dummy_api_key();
         let client = Client::new(test_api_key);
-        let res = client.company_profile2(ProfileToParam::CUSIP, "023135106".into()).await.unwrap();
-        println!("{:#?}", res);
+        let (obj, url) = client.company_profile2(ProfileToParam::CUSIP, "023135106".into()).await.unwrap();
+
+        let expected_filename = client.url_bldr.expected_filename(url.to_string());
+        let expected = load_expected_from_replay_filename(expected_filename);
+        let actual = format!("{:#?}", obj);
+
+        assert_eq!(actual, expected);
     }
 
     #[tokio::test]
     async fn market_news_general_test() {
         let test_api_key = get_dummy_api_key();
         let client = Client::new(test_api_key);
-        let res = client.market_news(MarketNewsCategory::General, None).await.unwrap();
-        println!("{:#?}", res);
+        let (obj, url) = client.market_news(MarketNewsCategory::General, None).await.unwrap();
+
+        let expected_filename = client.url_bldr.expected_filename(url.to_string());
+        let expected = load_expected_from_replay_filename(expected_filename);
+        let actual = format!("{:#?}", obj);
+
+        assert_eq!(actual, expected);
     }
 
     #[tokio::test]
     async fn market_news_forex_test() {
         let test_api_key = get_dummy_api_key();
         let client = Client::new(test_api_key);
-        let res = client.market_news(MarketNewsCategory::Forex, None).await.unwrap();
-        println!("{:#?}", res);
+        let (obj, url) = client.market_news(MarketNewsCategory::Forex, None).await.unwrap();
+
+        let expected_filename = client.url_bldr.expected_filename(url.to_string());
+        let expected = load_expected_from_replay_filename(expected_filename);
+        let actual = format!("{:#?}", obj);
+
+        assert_eq!(actual, expected);
     }
 
     #[tokio::test]
     async fn market_news_crypto_test() {
         let test_api_key = get_dummy_api_key();
         let client = Client::new(test_api_key);
-        let res = client.market_news(MarketNewsCategory::Crypto, None).await.unwrap();
-        println!("{:#?}", res);
+        let (obj, url) = client.market_news(MarketNewsCategory::Crypto, None).await.unwrap();
+
+        let expected_filename = client.url_bldr.expected_filename(url.to_string());
+        let expected = load_expected_from_replay_filename(expected_filename);
+        let actual = format!("{:#?}", obj);
+
+        assert_eq!(actual, expected);
     }
 
     #[tokio::test]
     async fn market_news_merger_test() {
         let test_api_key = get_dummy_api_key();
         let client = Client::new(test_api_key);
-        let res = client.market_news(MarketNewsCategory::Merger, None).await.unwrap();
-        println!("{:#?}", res);
+        let (obj, url) = client.market_news(MarketNewsCategory::Merger, None).await.unwrap();
+
+        let expected_filename = client.url_bldr.expected_filename(url.to_string());
+        let expected = load_expected_from_replay_filename(expected_filename);
+        let actual = format!("{:#?}", obj);
+
+        assert_eq!(actual, expected);
     }
 
     #[tokio::test]
     async fn company_news_test() {
         let test_api_key = get_dummy_api_key();
         let client = Client::new(test_api_key);
-        let res = client
+        let (obj, url) = client
             .company_news(
                 "GOOGL".into(),
                 "2020-12-10".into(),
@@ -132,41 +175,66 @@ mod test {
             )
             .await
             .unwrap();
-        println!("{:#?}", res);
+
+        let expected_filename = client.url_bldr.expected_filename(url.to_string());
+        let expected = load_expected_from_replay_filename(expected_filename);
+        let actual = format!("{:#?}", obj);
+
+        assert_eq!(actual, expected);
     }
 
     #[tokio::test]
     async fn news_sentiment_test() {
         let test_api_key = get_dummy_api_key();
         let client = Client::new(test_api_key);
-        let res = client.news_sentiment("FB".into()).await.unwrap();
-        println!("{:#?}", res);
+        let (obj, url) = client.news_sentiment("FB".into()).await.unwrap();
+
+        let expected_filename = client.url_bldr.expected_filename(url.to_string());
+        let expected = load_expected_from_replay_filename(expected_filename);
+        let actual = format!("{:#?}", obj);
+
+        assert_eq!(actual, expected);
     }
 
     #[tokio::test]
     async fn peers_test() {
         let test_api_key = get_dummy_api_key();
         let client = Client::new(test_api_key);
-        let res = client.peers("MCD".into()).await.unwrap();
-        println!("{:#?}", res);
+        let (obj, url) = client.peers("MCD".into()).await.unwrap();
+
+        let expected_filename = client.url_bldr.expected_filename(url.to_string());
+        let expected = load_expected_from_replay_filename(expected_filename);
+        let actual = format!("{:#?}", obj);
+
+        assert_eq!(actual, expected);
     }
 
     #[tokio::test]
     async fn quote_test() {
         let test_api_key = get_dummy_api_key();
         let client = Client::new(test_api_key);
-        let res = client.quote("TSLA".into()).await.unwrap();
-        println!("{:#?}", res)
+        let (obj, url) = client.quote("TSLA".into()).await.unwrap();
+
+        let expected_filename = client.url_bldr.expected_filename(url.to_string());
+        let expected = load_expected_from_replay_filename(expected_filename);
+        let actual = format!("{:#?}", obj);
+
+        assert_eq!(actual, expected);
     }
 
     #[tokio::test]
     async fn basic_financials_test() {
         let test_api_key = get_dummy_api_key();
         let client = Client::new(test_api_key);
-        let res = client
+        let (obj, url) = client
             .basic_financials("NFLX".into())
             .await
             .unwrap();
-        println!("{:#?}", res);
+
+        let expected_filename = client.url_bldr.expected_filename(url.to_string());
+        let expected = load_expected_from_replay_filename(expected_filename);
+        let actual = format!("{:#?}", obj);
+
+        assert_eq!(actual, expected);
     }
 }
