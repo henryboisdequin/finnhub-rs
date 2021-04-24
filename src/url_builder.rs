@@ -9,6 +9,11 @@ impl UrlBuilder {
         Self { root: root.to_string() }
     }
 
+    #[allow(dead_code)]
+    pub fn root(&self) -> String {
+        self.root.clone()
+    }
+
     pub fn url(&self, endpoint: &str, params: &Vec<(&str, String)>) -> String {
         format!("{}/{}?{}", &self.root, endpoint, UrlBuilder::join_params(params))
     }

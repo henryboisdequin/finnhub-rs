@@ -139,8 +139,26 @@ impl Client {
         params.push(("token", self.api_key.clone()));
         let url_str = self.url_bldr.url(endpoint, params);
         let url = Url::parse(&url_str)?;
-        let res = reqwest::get(url).await?.json::<T>().await?;
-        Ok(res)
+
+        #[cfg(test)]
+            {
+                use reqwest_mock::{ReplayClient, RecordingTarget, Client};
+                use crate::utils::{url_to_replay_name, clean_key_from_file};
+
+                let replay_file = url_to_replay_name(url_str, self.url_bldr.root());
+                let rc = ReplayClient::new(RecordingTarget::file(replay_file.clone()), Default::default());
+                let response = rc.get(url.clone()).send().unwrap();
+                let deserialized = serde_json::from_slice::<T>(response.body.as_slice()).unwrap();
+
+                clean_key_from_file(replay_file, self.api_key.clone());
+
+                Ok(deserialized)
+            }
+        #[cfg(not(test))]
+            {
+                let res = reqwest::get(url).await?.json::<T>().await?;
+                Ok(res)
+            }
     }
 
     fn maybe_add<'a, T: std::fmt::Display>(params: &mut Vec<(&'a str, String)>, param: &'a str, value: Option<T>) {

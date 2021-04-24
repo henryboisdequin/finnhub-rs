@@ -30,6 +30,10 @@ pub mod types;
 mod utils;
 mod url_builder;
 
+/// If you are adding a new network test, you'll first need to test with a real api
+/// key to generate a response. After your test is passing, replace your api key with
+/// the dummy api key and check in the replay file that was generated in test folder.
+
 #[cfg(test)]
 mod test {
     // `cargo t -- --nocapture` to test
