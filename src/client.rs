@@ -161,6 +161,7 @@ impl Client {
             }
     }
 
+    /// If an optional parameter is Some(...), add it to the param list.
     fn maybe_add<'a, T: std::fmt::Display>(params: &mut Vec<(&'a str, String)>, param: &'a str, value: Option<T>) {
         if let Some(value) = value { params.push((param, format!("{}", value))); }
     }

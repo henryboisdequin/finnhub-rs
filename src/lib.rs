@@ -27,7 +27,9 @@
 pub mod client;
 /// All return types for all Finnhub-rs client methods.
 pub mod types;
+/// Utility functions related to testing and acquiring api keys.
 pub mod utils;
+/// Helper for generating urls and test filenames.
 pub mod url_builder;
 
 /// If you are adding a new network test, you'll first need to test with a real api
