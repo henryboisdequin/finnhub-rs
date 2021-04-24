@@ -1,6 +1,6 @@
 /// Structure for composing urls from a root, endpoint, and parameters.
 /// Also, generates test filenames based on urls.
-#[derive(Debug)]
+#[derive(Debug, Clone)]
 pub struct UrlBuilder {
     /// Root URL
     root: String,

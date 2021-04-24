@@ -7,7 +7,7 @@ use crate::url_builder::UrlBuilder;
 use serde::de::DeserializeOwned;
 
 /// Finnhub API Client object.
-#[derive(Debug)]
+#[derive(Debug, Clone)]
 pub struct Client {
     /// API key from the Finnhub dashboard.
     pub api_key: String,
