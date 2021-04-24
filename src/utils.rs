@@ -15,7 +15,7 @@ pub fn get_test_api_key() -> String {
     get_dummy_api_key()
 }
 
-#[cfg(test)]
+#[allow(dead_code)]
 pub fn get_dummy_api_key() -> String {
     "abc123".into()
 }
