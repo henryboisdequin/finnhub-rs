@@ -1,6 +1,5 @@
 #[allow(dead_code)]
 pub fn get_test_api_key() -> String {
-    /*
     use dotenv::dotenv;
     use std::env;
 
@@ -10,9 +9,6 @@ pub fn get_test_api_key() -> String {
     let test_api_key = env::var(key).expect("Key, value pair not present in .env file");
 
     test_api_key
-    */
-
-    get_dummy_api_key()
 }
 
 #[allow(dead_code)]
