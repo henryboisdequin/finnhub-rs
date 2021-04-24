@@ -1,0 +1,15 @@
+NewsSentiment {
+    buzz: Buzz {
+        articlesInLastWeek: 170,
+        buzz: 0.8607,
+        weeklyAverage: 197.5,
+    },
+    companyNewsScore: 0.5652,
+    sectorAverageBullishPercent: 0.6667,
+    sectorAverageNewsScore: 0.5357,
+    sentiment: Sentiment {
+        bearishPercent: 0.3334,
+        bullishPercent: 0.6666,
+    },
+    symbol: "FB",
+}

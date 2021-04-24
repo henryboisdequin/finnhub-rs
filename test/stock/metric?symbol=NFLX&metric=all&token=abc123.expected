@@ -1,0 +1,1845 @@
+BasicFinancials {
+    series: Series {
+        annual: Annual {
+            cashRatio: [
+                PeriodPlusV {
+                    period: "2019-12-31",
+                    v: 0.7320098499116647,
+                },
+                PeriodPlusV {
+                    period: "2018-12-31",
+                    v: 0.5849076352022099,
+                },
+                PeriodPlusV {
+                    period: "2017-12-31",
+                    v: 0.5164654226125137,
+                },
+                PeriodPlusV {
+                    period: "2016-12-31",
+                    v: 0.31996637202215034,
+                },
+                PeriodPlusV {
+                    period: "2015-12-31",
+                    v: 0.5126126748911499,
+                },
+                PeriodPlusV {
+                    period: "2014-12-31",
+                    v: 0.41832519714607586,
+                },
+                PeriodPlusV {
+                    period: "2013-12-31",
+                    v: 0.2808727948003714,
+                },
+                PeriodPlusV {
+                    period: "2012-12-31",
+                    v: 0.1730310262529833,
+                },
+                PeriodPlusV {
+                    period: "2011-12-31",
+                    v: 0.4146938775510204,
+                },
+                PeriodPlusV {
+                    period: "2010-12-31",
+                    v: 0.4987146529562982,
+                },
+                PeriodPlusV {
+                    period: "2009-12-31",
+                    v: 0.5903083700440529,
+                },
+                PeriodPlusV {
+                    period: "2008-12-31",
+                    v: 0.6481481481481481,
+                },
+                PeriodPlusV {
+                    period: "2007-12-31",
+                    v: 0.84688995215311,
+                },
+                PeriodPlusV {
+                    period: "2006-12-31",
+                    v: 2.0725388601036268,
+                },
+                PeriodPlusV {
+                    period: "2005-12-31",
+                    v: 1.536231884057971,
+                },
+                PeriodPlusV {
+                    period: "2004-12-31",
+                    v: 1.831578947368421,
+                },
+                PeriodPlusV {
+                    period: "2003-12-31",
+                    v: 1.4285714285714286,
+                },
+                PeriodPlusV {
+                    period: "2002-12-31",
+                    v: 1.5,
+                },
+                PeriodPlusV {
+                    period: "2001-12-31",
+                    v: 0.6153846153846154,
+                },
+                PeriodPlusV {
+                    period: "2000-12-31",
+                    v: 0.75,
+                },
+            ],
+            currentRatio: [
+                PeriodPlusV {
+                    period: "2019-12-31",
+                    v: 0.9012,
+                },
+                PeriodPlusV {
+                    period: "2018-12-31",
+                    v: 1.4943,
+                },
+                PeriodPlusV {
+                    period: "2017-12-31",
+                    v: 1.4032,
+                },
+                PeriodPlusV {
+                    period: "2016-12-31",
+                    v: 1.2472,
+                },
+                PeriodPlusV {
+                    period: "2015-12-31",
+                    v: 1.5389,
+                },
+                PeriodPlusV {
+                    period: "2014-12-31",
+                    v: 1.4747,
+                },
+                PeriodPlusV {
+                    period: "2013-12-31",
+                    v: 1.4201,
+                },
+                PeriodPlusV {
+                    period: "2012-12-31",
+                    v: 1.3371,
+                },
+                PeriodPlusV {
+                    period: "2011-12-31",
+                    v: 1.4947,
+                },
+                PeriodPlusV {
+                    period: "2010-12-31",
+                    v: 1.6375,
+                },
+                PeriodPlusV {
+                    period: "2009-12-31",
+                    v: 1.8106,
+                },
+                PeriodPlusV {
+                    period: "2008-12-31",
+                    v: 1.662,
+                },
+                PeriodPlusV {
+                    period: "2007-12-31",
+                    v: 2.067,
+                },
+                PeriodPlusV {
+                    period: "2006-12-31",
+                    v: 2.2176,
+                },
+                PeriodPlusV {
+                    period: "2005-12-31",
+                    v: 1.7681,
+                },
+                PeriodPlusV {
+                    period: "2004-12-31",
+                    v: 1.9684,
+                },
+                PeriodPlusV {
+                    period: "2003-12-31",
+                    v: 2.2063,
+                },
+                PeriodPlusV {
+                    period: "2002-12-31",
+                    v: 2.675,
+                },
+                PeriodPlusV {
+                    period: "2001-12-31",
+                    v: 0.7692,
+                },
+                PeriodPlusV {
+                    period: "2000-12-31",
+                    v: 0.9,
+                },
+            ],
+            ebitPerShare: [
+                PeriodPlusV {
+                    period: "2019-12-31",
+                    v: 5.7646,
+                },
+                PeriodPlusV {
+                    period: "2018-12-31",
+                    v: 3.5573,
+                },
+                PeriodPlusV {
+                    period: "2017-12-31",
+                    v: 1.877,
+                },
+                PeriodPlusV {
+                    period: "2016-12-31",
+                    v: 0.8658,
+                },
+                PeriodPlusV {
+                    period: "2015-12-31",
+                    v: 0.7007,
+                },
+                PeriodPlusV {
+                    period: "2014-12-31",
+                    v: 0.9329,
+                },
+                PeriodPlusV {
+                    period: "2013-12-31",
+                    v: 0.4776,
+                },
+                PeriodPlusV {
+                    period: "2012-12-31",
+                    v: 0.1214,
+                },
+                PeriodPlusV {
+                    period: "2011-12-31",
+                    v: 0.9869,
+                },
+                PeriodPlusV {
+                    period: "2010-12-31",
+                    v: 0.7474,
+                },
+                PeriodPlusV {
+                    period: "2009-12-31",
+                    v: 0.4694,
+                },
+                PeriodPlusV {
+                    period: "2008-12-31",
+                    v: 0.2773,
+                },
+                PeriodPlusV {
+                    period: "2007-12-31",
+                    v: 0.1909,
+                },
+                PeriodPlusV {
+                    period: "2006-12-31",
+                    v: 0.1343,
+                },
+                PeriodPlusV {
+                    period: "2005-12-31",
+                    v: 0.0065,
+                },
+                PeriodPlusV {
+                    period: "2004-12-31",
+                    v: 0.0419,
+                },
+                PeriodPlusV {
+                    period: "2003-12-31",
+                    v: 0.0091,
+                },
+                PeriodPlusV {
+                    period: "2002-12-31",
+                    v: -0.0558,
+                },
+                PeriodPlusV {
+                    period: "2001-12-31",
+                    v: -0.1929,
+                },
+                PeriodPlusV {
+                    period: "2000-12-31",
+                    v: -0.1921,
+                },
+            ],
+            eps: [
+                PeriodPlusV {
+                    period: "2019-12-31",
+                    v: 4.1325,
+                },
+                PeriodPlusV {
+                    period: "2018-12-31",
+                    v: 2.6842,
+                },
+                PeriodPlusV {
+                    period: "2017-12-31",
+                    v: 1.2509,
+                },
+                PeriodPlusV {
+                    period: "2016-12-31",
+                    v: 0.4256,
+                },
+                PeriodPlusV {
+                    period: "2015-12-31",
+                    v: 0.281,
+                },
+                PeriodPlusV {
+                    period: "2014-12-31",
+                    v: 0.6181,
+                },
+                PeriodPlusV {
+                    period: "2013-12-31",
+                    v: 0.2635,
+                },
+                PeriodPlusV {
+                    period: "2012-12-31",
+                    v: 0.0413,
+                },
+                PeriodPlusV {
+                    period: "2011-12-31",
+                    v: 0.5932,
+                },
+                PeriodPlusV {
+                    period: "2010-12-31",
+                    v: 0.4237,
+                },
+                PeriodPlusV {
+                    period: "2009-12-31",
+                    v: 0.2836,
+                },
+                PeriodPlusV {
+                    period: "2008-12-31",
+                    v: 0.1886,
+                },
+                PeriodPlusV {
+                    period: "2007-12-31",
+                    v: 0.139,
+                },
+                PeriodPlusV {
+                    period: "2006-12-31",
+                    v: 0.1012,
+                },
+                PeriodPlusV {
+                    period: "2005-12-31",
+                    v: 0.0915,
+                },
+                PeriodPlusV {
+                    period: "2004-12-31",
+                    v: 0.0486,
+                },
+                PeriodPlusV {
+                    period: "2003-12-31",
+                    v: 0.0159,
+                },
+                PeriodPlusV {
+                    period: "2002-12-31",
+                    v: -0.1066,
+                },
+                PeriodPlusV {
+                    period: "2001-12-31",
+                    v: -0.198,
+                },
+                PeriodPlusV {
+                    period: "2000-12-31",
+                    v: -0.1887,
+                },
+            ],
+            grossMargin: [
+                PeriodPlusV {
+                    period: "2019-12-31",
+                    v: 0.3828,
+                },
+                PeriodPlusV {
+                    period: "2018-12-31",
+                    v: 0.3689,
+                },
+                PeriodPlusV {
+                    period: "2017-12-31",
+                    v: 0.3449,
+                },
+                PeriodPlusV {
+                    period: "2016-12-31",
+                    v: 0.3172,
+                },
+                PeriodPlusV {
+                    period: "2015-12-31",
+                    v: 0.3227,
+                },
+                PeriodPlusV {
+                    period: "2014-12-31",
+                    v: 0.3183,
+                },
+                PeriodPlusV {
+                    period: "2013-12-31",
+                    v: 0.2873,
+                },
+                PeriodPlusV {
+                    period: "2012-12-31",
+                    v: 0.2652,
+                },
+                PeriodPlusV {
+                    period: "2011-12-31",
+                    v: 0.3635,
+                },
+                PeriodPlusV {
+                    period: "2010-12-31",
+                    v: 0.3726,
+                },
+                PeriodPlusV {
+                    period: "2009-12-31",
+                    v: 0.3539,
+                },
+                PeriodPlusV {
+                    period: "2008-12-31",
+                    v: 0.3333,
+                },
+                PeriodPlusV {
+                    period: "2007-12-31",
+                    v: 0.3485,
+                },
+                PeriodPlusV {
+                    period: "2006-12-31",
+                    v: 0.3711,
+                },
+                PeriodPlusV {
+                    period: "2005-12-31",
+                    v: 0.3196,
+                },
+                PeriodPlusV {
+                    period: "2004-12-31",
+                    v: 0.3373,
+                },
+                PeriodPlusV {
+                    period: "2003-12-31",
+                    v: 0.337,
+                },
+                PeriodPlusV {
+                    period: "2002-12-31",
+                    v: 0.3595,
+                },
+                PeriodPlusV {
+                    period: "2001-12-31",
+                    v: 0.1711,
+                },
+                PeriodPlusV {
+                    period: "2000-12-31",
+                    v: 0.0278,
+                },
+            ],
+            longtermDebtTotalAsset: [
+                PeriodPlusV {
+                    period: "2019-12-31",
+                    v: 0.4344,
+                },
+                PeriodPlusV {
+                    period: "2018-12-31",
+                    v: 0.3989,
+                },
+                PeriodPlusV {
+                    period: "2017-12-31",
+                    v: 0.3418,
+                },
+                PeriodPlusV {
+                    period: "2016-12-31",
+                    v: 0.2476,
+                },
+                PeriodPlusV {
+                    period: "2015-12-31",
+                    v: 0.2324,
+                },
+                PeriodPlusV {
+                    period: "2014-12-31",
+                    v: 0.1258,
+                },
+                PeriodPlusV {
+                    period: "2013-12-31",
+                    v: 0.0924,
+                },
+                PeriodPlusV {
+                    period: "2012-12-31",
+                    v: 0.1008,
+                },
+                PeriodPlusV {
+                    period: "2011-12-31",
+                    v: 0.1303,
+                },
+                PeriodPlusV {
+                    period: "2010-12-31",
+                    v: 0.2037,
+                },
+                PeriodPlusV {
+                    period: "2009-12-31",
+                    v: 0.2941,
+                },
+                PeriodPlusV {
+                    period: "2008-12-31",
+                    v: 0.0,
+                },
+                PeriodPlusV {
+                    period: "2002-12-31",
+                    v: 0.0,
+                },
+                PeriodPlusV {
+                    period: "2001-12-31",
+                    v: 2.5,
+                },
+                PeriodPlusV {
+                    period: "2000-12-31",
+                    v: 2.0,
+                },
+            ],
+            longtermDebtTotalCapital: [
+                PeriodPlusV {
+                    period: "2019-12-31",
+                    v: 0.6606,
+                },
+                PeriodPlusV {
+                    period: "2018-12-31",
+                    v: 0.6642,
+                },
+                PeriodPlusV {
+                    period: "2017-12-31",
+                    v: 0.6428,
+                },
+                PeriodPlusV {
+                    period: "2016-12-31",
+                    v: 0.554,
+                },
+                PeriodPlusV {
+                    period: "2015-12-31",
+                    v: 0.5129,
+                },
+                PeriodPlusV {
+                    period: "2014-12-31",
+                    v: 0.3195,
+                },
+                PeriodPlusV {
+                    period: "2013-12-31",
+                    v: 0.2726,
+                },
+                PeriodPlusV {
+                    period: "2012-12-31",
+                    v: 0.3493,
+                },
+                PeriodPlusV {
+                    period: "2011-12-31",
+                    v: 0.3835,
+                },
+                PeriodPlusV {
+                    period: "2010-12-31",
+                    v: 0.4065,
+                },
+                PeriodPlusV {
+                    period: "2009-12-31",
+                    v: 0.4577,
+                },
+                PeriodPlusV {
+                    period: "2008-12-31",
+                    v: 0.0,
+                },
+                PeriodPlusV {
+                    period: "2002-12-31",
+                    v: 0.0,
+                },
+                PeriodPlusV {
+                    period: "2001-12-31",
+                    v: 5.8333,
+                },
+                PeriodPlusV {
+                    period: "2000-12-31",
+                    v: 2.8889,
+                },
+            ],
+            longtermDebtTotalEquity: [
+                PeriodPlusV {
+                    period: "2019-12-31",
+                    v: 1.9466,
+                },
+                PeriodPlusV {
+                    period: "2018-12-31",
+                    v: 1.9776,
+                },
+                PeriodPlusV {
+                    period: "2017-12-31",
+                    v: 1.8143,
+                },
+                PeriodPlusV {
+                    period: "2016-12-31",
+                    v: 1.2554,
+                },
+                PeriodPlusV {
+                    period: "2015-12-31",
+                    v: 1.0665,
+                },
+                PeriodPlusV {
+                    period: "2014-12-31",
+                    v: 0.4769,
+                },
+                PeriodPlusV {
+                    period: "2013-12-31",
+                    v: 0.3748,
+                },
+                PeriodPlusV {
+                    period: "2012-12-31",
+                    v: 0.5369,
+                },
+                PeriodPlusV {
+                    period: "2011-12-31",
+                    v: 0.6221,
+                },
+                PeriodPlusV {
+                    period: "2010-12-31",
+                    v: 0.6897,
+                },
+                PeriodPlusV {
+                    period: "2009-12-31",
+                    v: 1.005,
+                },
+                PeriodPlusV {
+                    period: "2008-12-31",
+                    v: 0.0,
+                },
+                PeriodPlusV {
+                    period: "2002-12-31",
+                    v: 0.0,
+                },
+            ],
+            netDebtToTotalCapital: [
+                PeriodPlusV {
+                    period: "2019-12-31",
+                    v: 0.436,
+                },
+                PeriodPlusV {
+                    period: "2018-12-31",
+                    v: 0.4209,
+                },
+                PeriodPlusV {
+                    period: "2017-12-31",
+                    v: 0.3665,
+                },
+                PeriodPlusV {
+                    period: "2016-12-31",
+                    v: 0.3171,
+                },
+                PeriodPlusV {
+                    period: "2015-12-31",
+                    v: 0.1278,
+                },
+                PeriodPlusV {
+                    period: "2014-12-31",
+                    v: -0.0718,
+                },
+                PeriodPlusV {
+                    period: "2013-12-31",
+                    v: -0.0573,
+                },
+                PeriodPlusV {
+                    period: "2012-12-31",
+                    v: 0.0961,
+                },
+                PeriodPlusV {
+                    period: "2011-12-31",
+                    v: -0.1035,
+                },
+                PeriodPlusV {
+                    period: "2010-12-31",
+                    v: 0.0163,
+                },
+                PeriodPlusV {
+                    period: "2009-12-31",
+                    v: 0.238,
+                },
+                PeriodPlusV {
+                    period: "2008-12-31",
+                    v: -0.2617,
+                },
+                PeriodPlusV {
+                    period: "2007-12-31",
+                    v: -0.3026,
+                },
+                PeriodPlusV {
+                    period: "2006-12-31",
+                    v: -0.9662,
+                },
+                PeriodPlusV {
+                    period: "2005-12-31",
+                    v: -0.9381,
+                },
+                PeriodPlusV {
+                    period: "2004-12-31",
+                    v: -1.1154,
+                },
+                PeriodPlusV {
+                    period: "2003-12-31",
+                    v: -0.7965,
+                },
+                PeriodPlusV {
+                    period: "2002-12-31",
+                    v: -0.6374,
+                },
+                PeriodPlusV {
+                    period: "2001-12-31",
+                    v: 5.1667,
+                },
+                PeriodPlusV {
+                    period: "2000-12-31",
+                    v: 2.6111,
+                },
+            ],
+            netDebtToTotalEquity: [
+                PeriodPlusV {
+                    period: "2019-12-31",
+                    v: 1.2847,
+                },
+                PeriodPlusV {
+                    period: "2018-12-31",
+                    v: 1.2533,
+                },
+                PeriodPlusV {
+                    period: "2017-12-31",
+                    v: 1.0346,
+                },
+                PeriodPlusV {
+                    period: "2016-12-31",
+                    v: 0.7187,
+                },
+                PeriodPlusV {
+                    period: "2015-12-31",
+                    v: 0.2658,
+                },
+                PeriodPlusV {
+                    period: "2014-12-31",
+                    v: -0.1071,
+                },
+                PeriodPlusV {
+                    period: "2013-12-31",
+                    v: -0.0787,
+                },
+                PeriodPlusV {
+                    period: "2012-12-31",
+                    v: 0.1477,
+                },
+                PeriodPlusV {
+                    period: "2011-12-31",
+                    v: -0.168,
+                },
+                PeriodPlusV {
+                    period: "2010-12-31",
+                    v: 0.0276,
+                },
+                PeriodPlusV {
+                    period: "2009-12-31",
+                    v: 0.5226,
+                },
+                PeriodPlusV {
+                    period: "2008-12-31",
+                    v: -0.2911,
+                },
+                PeriodPlusV {
+                    period: "2007-12-31",
+                    v: -0.3279,
+                },
+                PeriodPlusV {
+                    period: "2006-12-31",
+                    v: -0.9662,
+                },
+                PeriodPlusV {
+                    period: "2005-12-31",
+                    v: -0.9381,
+                },
+                PeriodPlusV {
+                    period: "2004-12-31",
+                    v: -1.1154,
+                },
+                PeriodPlusV {
+                    period: "2003-12-31",
+                    v: -0.7965,
+                },
+                PeriodPlusV {
+                    period: "2002-12-31",
+                    v: -0.6517,
+                },
+            ],
+            netMargin: [
+                PeriodPlusV {
+                    period: "2019-12-31",
+                    v: 0.0926,
+                },
+                PeriodPlusV {
+                    period: "2018-12-31",
+                    v: 0.0767,
+                },
+                PeriodPlusV {
+                    period: "2017-12-31",
+                    v: 0.0478,
+                },
+                PeriodPlusV {
+                    period: "2016-12-31",
+                    v: 0.0211,
+                },
+                PeriodPlusV {
+                    period: "2015-12-31",
+                    v: 0.0181,
+                },
+                PeriodPlusV {
+                    period: "2014-12-31",
+                    v: 0.0485,
+                },
+                PeriodPlusV {
+                    period: "2013-12-31",
+                    v: 0.0256,
+                },
+                PeriodPlusV {
+                    period: "2012-12-31",
+                    v: 0.0047,
+                },
+                PeriodPlusV {
+                    period: "2011-12-31",
+                    v: 0.0705,
+                },
+                PeriodPlusV {
+                    period: "2010-12-31",
+                    v: 0.0744,
+                },
+                PeriodPlusV {
+                    period: "2009-12-31",
+                    v: 0.0695,
+                },
+                PeriodPlusV {
+                    period: "2008-12-31",
+                    v: 0.0608,
+                },
+                PeriodPlusV {
+                    period: "2007-12-31",
+                    v: 0.0556,
+                },
+                PeriodPlusV {
+                    period: "2006-12-31",
+                    v: 0.0491,
+                },
+                PeriodPlusV {
+                    period: "2005-12-31",
+                    v: 0.0616,
+                },
+                PeriodPlusV {
+                    period: "2004-12-31",
+                    v: 0.0439,
+                },
+                PeriodPlusV {
+                    period: "2003-12-31",
+                    v: 0.0259,
+                },
+                PeriodPlusV {
+                    period: "2002-12-31",
+                    v: -0.1373,
+                },
+                PeriodPlusV {
+                    period: "2001-12-31",
+                    v: -0.5132,
+                },
+                PeriodPlusV {
+                    period: "2000-12-31",
+                    v: -1.5833,
+                },
+            ],
+            operatingMargin: [
+                PeriodPlusV {
+                    period: "2019-12-31",
+                    v: 0.1292,
+                },
+                PeriodPlusV {
+                    period: "2018-12-31",
+                    v: 0.1016,
+                },
+                PeriodPlusV {
+                    period: "2017-12-31",
+                    v: 0.0717,
+                },
+                PeriodPlusV {
+                    period: "2016-12-31",
+                    v: 0.043,
+                },
+                PeriodPlusV {
+                    period: "2015-12-31",
+                    v: 0.0451,
+                },
+                PeriodPlusV {
+                    period: "2014-12-31",
+                    v: 0.0732,
+                },
+                PeriodPlusV {
+                    period: "2013-12-31",
+                    v: 0.0464,
+                },
+                PeriodPlusV {
+                    period: "2012-12-31",
+                    v: 0.0139,
+                },
+                PeriodPlusV {
+                    period: "2011-12-31",
+                    v: 0.1173,
+                },
+                PeriodPlusV {
+                    period: "2010-12-31",
+                    v: 0.1313,
+                },
+                PeriodPlusV {
+                    period: "2009-12-31",
+                    v: 0.115,
+                },
+                PeriodPlusV {
+                    period: "2008-12-31",
+                    v: 0.0894,
+                },
+                PeriodPlusV {
+                    period: "2007-12-31",
+                    v: 0.0763,
+                },
+                PeriodPlusV {
+                    period: "2006-12-31",
+                    v: 0.0652,
+                },
+                PeriodPlusV {
+                    period: "2005-12-31",
+                    v: 0.0044,
+                },
+                PeriodPlusV {
+                    period: "2004-12-31",
+                    v: 0.0379,
+                },
+                PeriodPlusV {
+                    period: "2003-12-31",
+                    v: 0.0148,
+                },
+                PeriodPlusV {
+                    period: "2002-12-31",
+                    v: -0.0719,
+                },
+                PeriodPlusV {
+                    period: "2001-12-31",
+                    v: -0.5,
+                },
+                PeriodPlusV {
+                    period: "2000-12-31",
+                    v: -1.6111,
+                },
+            ],
+            pretaxMargin: [
+                PeriodPlusV {
+                    period: "2019-12-31",
+                    v: 0.1023,
+                },
+                PeriodPlusV {
+                    period: "2018-12-31",
+                    v: 0.0777,
+                },
+                PeriodPlusV {
+                    period: "2017-12-31",
+                    v: 0.0415,
+                },
+                PeriodPlusV {
+                    period: "2016-12-31",
+                    v: 0.0295,
+                },
+                PeriodPlusV {
+                    period: "2015-12-31",
+                    v: 0.0209,
+                },
+                PeriodPlusV {
+                    period: "2014-12-31",
+                    v: 0.0634,
+                },
+                PeriodPlusV {
+                    period: "2013-12-31",
+                    v: 0.0391,
+                },
+                PeriodPlusV {
+                    period: "2012-12-31",
+                    v: 0.0083,
+                },
+                PeriodPlusV {
+                    period: "2011-12-31",
+                    v: 0.1123,
+                },
+                PeriodPlusV {
+                    period: "2010-12-31",
+                    v: 0.1239,
+                },
+                PeriodPlusV {
+                    period: "2009-12-31",
+                    v: 0.115,
+                },
+                PeriodPlusV {
+                    period: "2008-12-31",
+                    v: 0.0967,
+                },
+                PeriodPlusV {
+                    period: "2007-12-31",
+                    v: 0.0921,
+                },
+                PeriodPlusV {
+                    period: "2006-12-31",
+                    v: 0.0802,
+                },
+                PeriodPlusV {
+                    period: "2005-12-31",
+                    v: 0.0117,
+                },
+                PeriodPlusV {
+                    period: "2004-12-31",
+                    v: 0.0439,
+                },
+                PeriodPlusV {
+                    period: "2003-12-31",
+                    v: 0.0259,
+                },
+                PeriodPlusV {
+                    period: "2002-12-31",
+                    v: -0.1373,
+                },
+                PeriodPlusV {
+                    period: "2001-12-31",
+                    v: -0.5132,
+                },
+                PeriodPlusV {
+                    period: "2000-12-31",
+                    v: -1.5833,
+                },
+            ],
+            salesPerShare: [
+                PeriodPlusV {
+                    period: "2019-12-31",
+                    v: 44.6171,
+                },
+                PeriodPlusV {
+                    period: "2018-12-31",
+                    v: 35.0018,
+                },
+                PeriodPlusV {
+                    period: "2017-12-31",
+                    v: 26.1691,
+                },
+                PeriodPlusV {
+                    period: "2016-12-31",
+                    v: 20.1314,
+                },
+                PeriodPlusV {
+                    period: "2015-12-31",
+                    v: 15.5331,
+                },
+                PeriodPlusV {
+                    period: "2014-12-31",
+                    v: 12.7431,
+                },
+                PeriodPlusV {
+                    period: "2013-12-31",
+                    v: 10.2941,
+                },
+                PeriodPlusV {
+                    period: "2012-12-31",
+                    v: 8.7597,
+                },
+                PeriodPlusV {
+                    period: "2011-12-31",
+                    v: 8.4121,
+                },
+                PeriodPlusV {
+                    period: "2010-12-31",
+                    v: 5.6921,
+                },
+                PeriodPlusV {
+                    period: "2009-12-31",
+                    v: 4.0831,
+                },
+                PeriodPlusV {
+                    period: "2008-12-31",
+                    v: 3.1023,
+                },
+                PeriodPlusV {
+                    period: "2007-12-31",
+                    v: 2.5,
+                },
+                PeriodPlusV {
+                    period: "2006-12-31",
+                    v: 2.0599,
+                },
+                PeriodPlusV {
+                    period: "2005-12-31",
+                    v: 1.4858,
+                },
+                PeriodPlusV {
+                    period: "2004-12-31",
+                    v: 1.106,
+                },
+                PeriodPlusV {
+                    period: "2003-12-31",
+                    v: 0.6136,
+                },
+                PeriodPlusV {
+                    period: "2002-12-31",
+                    v: 0.7766,
+                },
+                PeriodPlusV {
+                    period: "2001-12-31",
+                    v: 0.3858,
+                },
+                PeriodPlusV {
+                    period: "2000-12-31",
+                    v: 0.1192,
+                },
+            ],
+            sgaToSale: [
+                PeriodPlusV {
+                    period: "2019-12-31",
+                    v: 0.6172,
+                },
+                PeriodPlusV {
+                    period: "2018-12-31",
+                    v: 0.6311,
+                },
+                PeriodPlusV {
+                    period: "2017-12-31",
+                    v: 0.6551,
+                },
+                PeriodPlusV {
+                    period: "2016-12-31",
+                    v: 0.6828,
+                },
+                PeriodPlusV {
+                    period: "2015-12-31",
+                    v: 0.6773,
+                },
+                PeriodPlusV {
+                    period: "2014-12-31",
+                    v: 0.6817,
+                },
+                PeriodPlusV {
+                    period: "2013-12-31",
+                    v: 0.7125,
+                },
+                PeriodPlusV {
+                    period: "2012-12-31",
+                    v: 0.7348,
+                },
+                PeriodPlusV {
+                    period: "2011-12-31",
+                    v: 0.6365,
+                },
+                PeriodPlusV {
+                    period: "2010-12-31",
+                    v: 0.6269,
+                },
+                PeriodPlusV {
+                    period: "2009-12-31",
+                    v: 0.6461,
+                },
+                PeriodPlusV {
+                    period: "2008-12-31",
+                    v: 0.6667,
+                },
+                PeriodPlusV {
+                    period: "2007-12-31",
+                    v: 0.6523,
+                },
+                PeriodPlusV {
+                    period: "2006-12-31",
+                    v: 0.6289,
+                },
+                PeriodPlusV {
+                    period: "2005-12-31",
+                    v: 0.6818,
+                },
+                PeriodPlusV {
+                    period: "2004-12-31",
+                    v: 0.6627,
+                },
+                PeriodPlusV {
+                    period: "2003-12-31",
+                    v: 0.663,
+                },
+                PeriodPlusV {
+                    period: "2002-12-31",
+                    v: 0.6405,
+                },
+                PeriodPlusV {
+                    period: "2001-12-31",
+                    v: 0.8289,
+                },
+                PeriodPlusV {
+                    period: "2000-12-31",
+                    v: 0.9722,
+                },
+            ],
+            totalDebtToEquity: [
+                PeriodPlusV {
+                    period: "2019-12-31",
+                    v: 1.9466,
+                },
+                PeriodPlusV {
+                    period: "2018-12-31",
+                    v: 1.9776,
+                },
+                PeriodPlusV {
+                    period: "2017-12-31",
+                    v: 1.8227,
+                },
+                PeriodPlusV {
+                    period: "2016-12-31",
+                    v: 1.2663,
+                },
+                PeriodPlusV {
+                    period: "2015-12-31",
+                    v: 1.0796,
+                },
+                PeriodPlusV {
+                    period: "2014-12-31",
+                    v: 0.4925,
+                },
+                PeriodPlusV {
+                    period: "2013-12-31",
+                    v: 0.3748,
+                },
+                PeriodPlusV {
+                    period: "2012-12-31",
+                    v: 0.5369,
+                },
+                PeriodPlusV {
+                    period: "2011-12-31",
+                    v: 0.6221,
+                },
+                PeriodPlusV {
+                    period: "2010-12-31",
+                    v: 0.6966,
+                },
+                PeriodPlusV {
+                    period: "2009-12-31",
+                    v: 1.196,
+                },
+                PeriodPlusV {
+                    period: "2008-12-31",
+                    v: 0.1124,
+                },
+                PeriodPlusV {
+                    period: "2007-12-31",
+                    v: 0.0837,
+                },
+                PeriodPlusV {
+                    period: "2006-12-31",
+                    v: 0.0,
+                },
+                PeriodPlusV {
+                    period: "2005-12-31",
+                    v: 0.0,
+                },
+                PeriodPlusV {
+                    period: "2004-12-31",
+                    v: 0.0,
+                },
+                PeriodPlusV {
+                    period: "2003-12-31",
+                    v: 0.0,
+                },
+                PeriodPlusV {
+                    period: "2002-12-31",
+                    v: 0.0225,
+                },
+            ],
+            totalDebtToTotalAsset: [
+                PeriodPlusV {
+                    period: "2019-12-31",
+                    v: 0.4344,
+                },
+                PeriodPlusV {
+                    period: "2018-12-31",
+                    v: 0.3989,
+                },
+                PeriodPlusV {
+                    period: "2017-12-31",
+                    v: 0.3434,
+                },
+                PeriodPlusV {
+                    period: "2016-12-31",
+                    v: 0.2498,
+                },
+                PeriodPlusV {
+                    period: "2015-12-31",
+                    v: 0.2353,
+                },
+                PeriodPlusV {
+                    period: "2014-12-31",
+                    v: 0.1299,
+                },
+                PeriodPlusV {
+                    period: "2013-12-31",
+                    v: 0.0924,
+                },
+                PeriodPlusV {
+                    period: "2012-12-31",
+                    v: 0.1008,
+                },
+                PeriodPlusV {
+                    period: "2011-12-31",
+                    v: 0.1303,
+                },
+                PeriodPlusV {
+                    period: "2010-12-31",
+                    v: 0.2057,
+                },
+                PeriodPlusV {
+                    period: "2009-12-31",
+                    v: 0.35,
+                },
+                PeriodPlusV {
+                    period: "2008-12-31",
+                    v: 0.0634,
+                },
+                PeriodPlusV {
+                    period: "2007-12-31",
+                    v: 0.053,
+                },
+                PeriodPlusV {
+                    period: "2006-12-31",
+                    v: 0.0,
+                },
+                PeriodPlusV {
+                    period: "2005-12-31",
+                    v: 0.0,
+                },
+                PeriodPlusV {
+                    period: "2004-12-31",
+                    v: 0.0,
+                },
+                PeriodPlusV {
+                    period: "2003-12-31",
+                    v: 0.0,
+                },
+                PeriodPlusV {
+                    period: "2002-12-31",
+                    v: 0.0153,
+                },
+                PeriodPlusV {
+                    period: "2001-12-31",
+                    v: 2.5952,
+                },
+                PeriodPlusV {
+                    period: "2000-12-31",
+                    v: 2.0962,
+                },
+            ],
+            totalDebtToTotalCapital: [
+                PeriodPlusV {
+                    period: "2019-12-31",
+                    v: 0.6606,
+                },
+                PeriodPlusV {
+                    period: "2018-12-31",
+                    v: 0.6642,
+                },
+                PeriodPlusV {
+                    period: "2017-12-31",
+                    v: 0.6457,
+                },
+                PeriodPlusV {
+                    period: "2016-12-31",
+                    v: 0.5588,
+                },
+                PeriodPlusV {
+                    period: "2015-12-31",
+                    v: 0.5191,
+                },
+                PeriodPlusV {
+                    period: "2014-12-31",
+                    v: 0.33,
+                },
+                PeriodPlusV {
+                    period: "2013-12-31",
+                    v: 0.2726,
+                },
+                PeriodPlusV {
+                    period: "2012-12-31",
+                    v: 0.3493,
+                },
+                PeriodPlusV {
+                    period: "2011-12-31",
+                    v: 0.3835,
+                },
+                PeriodPlusV {
+                    period: "2010-12-31",
+                    v: 0.4106,
+                },
+                PeriodPlusV {
+                    period: "2009-12-31",
+                    v: 0.5446,
+                },
+                PeriodPlusV {
+                    period: "2008-12-31",
+                    v: 0.101,
+                },
+                PeriodPlusV {
+                    period: "2007-12-31",
+                    v: 0.0773,
+                },
+                PeriodPlusV {
+                    period: "2006-12-31",
+                    v: 0.0,
+                },
+                PeriodPlusV {
+                    period: "2005-12-31",
+                    v: 0.0,
+                },
+                PeriodPlusV {
+                    period: "2004-12-31",
+                    v: 0.0,
+                },
+                PeriodPlusV {
+                    period: "2003-12-31",
+                    v: 0.0,
+                },
+                PeriodPlusV {
+                    period: "2002-12-31",
+                    v: 0.022,
+                },
+                PeriodPlusV {
+                    period: "2001-12-31",
+                    v: 6.0556,
+                },
+                PeriodPlusV {
+                    period: "2000-12-31",
+                    v: 3.0278,
+                },
+            ],
+            totalRatio: [
+                PeriodPlusV {
+                    period: "2019-12-31",
+                    v: 1.2873,
+                },
+                PeriodPlusV {
+                    period: "2018-12-31",
+                    v: 1.2526,
+                },
+                PeriodPlusV {
+                    period: "2017-12-31",
+                    v: 1.2321,
+                },
+                PeriodPlusV {
+                    period: "2016-12-31",
+                    v: 1.2457,
+                },
+                PeriodPlusV {
+                    period: "2015-12-31",
+                    v: 1.2786,
+                },
+                PeriodPlusV {
+                    period: "2014-12-31",
+                    v: 1.3583,
+                },
+                PeriodPlusV {
+                    period: "2013-12-31",
+                    v: 1.327,
+                },
+                PeriodPlusV {
+                    period: "2012-12-31",
+                    v: 1.2312,
+                },
+                PeriodPlusV {
+                    period: "2011-12-31",
+                    v: 1.265,
+                },
+                PeriodPlusV {
+                    period: "2010-12-31",
+                    v: 1.4191,
+                },
+                PeriodPlusV {
+                    period: "2009-12-31",
+                    v: 1.4137,
+                },
+                PeriodPlusV {
+                    period: "2008-12-31",
+                    v: 2.2948,
+                },
+                PeriodPlusV {
+                    period: "2007-12-31",
+                    v: 2.7269,
+                },
+                PeriodPlusV {
+                    period: "2006-12-31",
+                    v: 3.1231,
+                },
+                PeriodPlusV {
+                    period: "2005-12-31",
+                    v: 2.6449,
+                },
+                PeriodPlusV {
+                    period: "2004-12-31",
+                    v: 2.625,
+                },
+                PeriodPlusV {
+                    period: "2003-12-31",
+                    v: 2.7937,
+                },
+                PeriodPlusV {
+                    period: "2002-12-31",
+                    v: 3.1951,
+                },
+                PeriodPlusV {
+                    period: "2001-12-31",
+                    v: 0.3182,
+                },
+                PeriodPlusV {
+                    period: "2000-12-31",
+                    v: 0.4127,
+                },
+            ],
+        },
+    },
+    metric: Metric {
+        averageTradingVolume_10Day: Some(
+            3.19381,
+        ),
+        priceReturnDaily_13Week: Some(
+            9.7514,
+        ),
+        priceReturnDaily_26Week: Some(
+            2.96728,
+        ),
+        averageTradingVolume_3Month: Some(
+            94.50359,
+        ),
+        high_52Week: Some(
+            593.2877,
+        ),
+        high_date_52Week: Some(
+            "2021-01-20",
+        ),
+        low_52Week: Some(
+            393.6,
+        ),
+        low_date_52Week: Some(
+            "2020-04-29",
+        ),
+        priceReturnDaily_52Week: Some(
+            24.44839,
+        ),
+        priceReturnDaily_5Day: Some(
+            -1.5793,
+        ),
+        assetTurnoverAnnual: Some(
+            0.68243,
+        ),
+        assetTurnoverTTM: Some(
+            0.68243,
+        ),
+        beta: Some(
+            0.77513,
+        ),
+        bookValuePerShareAnnual: Some(
+            24.98388,
+        ),
+        bookValuePerShareQuarterly: Some(
+            24.98388,
+        ),
+        bookValueShareGrowth5Y: Some(
+            36.9002,
+        ),
+        capitalSpendingGrowth5Y: Some(
+            24.09357,
+        ),
+        cashFlowPerShareAnnual: Some(
+            29.93523,
+        ),
+        cashFlowPerShareTTM: Some(
+            29.93542,
+        ),
+        cashPerSharePerShareAnnual: Some(
+            18.52707,
+        ),
+        cashPerSharePerShareQuarterly: Some(
+            18.52707,
+        ),
+        currentDividendYieldTTM: Some(
+            0.0,
+        ),
+        currentEv_freeCashFlowAnnual: Some(
+            19.09805,
+        ),
+        currentEv_freeCashFlowTTM: Some(
+            19.09805,
+        ),
+        currentRatioAnnual: Some(
+            1.25056,
+        ),
+        currentRatioQuarterly: Some(
+            1.25056,
+        ),
+        dividendGrowthRate5Y: None,
+        dividendPerShare5Y: None,
+        dividendPerShareAnnual: None,
+        dividendYield5Y: None,
+        dividendYieldIndicatedAnnual: None,
+        dividendsPerShareTTM: Some(
+            0.0,
+        ),
+        ebitdPerShareTTM: Some(
+            36.27195,
+        ),
+        ebitdaCagr5Y: Some(
+            33.94032,
+        ),
+        ebitdaInterimCagr5Y: Some(
+            33.7235,
+        ),
+        epsBasicExclExtraItemsAnnual: Some(
+            6.06502,
+        ),
+        epsBasicExclExtraItemsTTM: Some(
+            6.06657,
+        ),
+        epsExclExtraItemsAnnual: Some(
+            5.88761,
+        ),
+        epsExclExtraItemsTTM: Some(
+            5.8887,
+        ),
+        epsGrowth3Y: Some(
+            60.35228,
+        ),
+        epsGrowth5Y: Some(
+            83.75943,
+        ),
+        epsGrowthQuarterlyYoy: Some(
+            -1.82735,
+        ),
+        epsGrowthTTMYoy: Some(
+            52.91591,
+        ),
+        epsInclExtraItemsAnnual: Some(
+            6.07958,
+        ),
+        epsInclExtraItemsTTM: Some(
+            6.08021,
+        ),
+        epsNormalizedAnnual: Some(
+            7.91373,
+        ),
+        focfCagr5Y: None,
+        freeCashFlowAnnual: Some(
+            1929.154,
+        ),
+        freeCashFlowPerShareTTM: Some(
+            4.24732,
+        ),
+        freeCashFlowTTM: Some(
+            1929.154,
+        ),
+        freeOperatingCashFlow_revenue5Y: Some(
+            -9.54459,
+        ),
+        freeOperatingCashFlow_revenueTTM: Some(
+            7.71783,
+        ),
+        grossMargin5Y: Some(
+            38.29324,
+        ),
+        grossMarginAnnual: Some(
+            43.28978,
+        ),
+        grossMarginTTM: Some(
+            42.75369,
+        ),
+        inventoryTurnoverAnnual: None,
+        inventoryTurnoverTTM: None,
+        longTermDebt_equityAnnual: Some(
+            142.8717,
+        ),
+        longTermDebt_equityQuarterly: Some(
+            142.8717,
+        ),
+        marketCapitalization: Some(
+            242060.0,
+        ),
+        monthToDatePriceReturnDaily: Some(
+            4.76939,
+        ),
+        netDebtAnnual: Some(
+            8103.423,
+        ),
+        netDebtInterim: Some(
+            8103.423,
+        ),
+        netIncomeEmployeeAnnual: Some(
+            297133.4,
+        ),
+        netIncomeEmployeeTTM: Some(
+            284489.5,
+        ),
+        netInterestCoverageAnnual: Some(
+            4.10284,
+        ),
+        netInterestCoverageTTM: Some(
+            4.00615,
+        ),
+        netMarginGrowth5Y: Some(
+            42.68458,
+        ),
+        netProfitMargin5Y: Some(
+            7.88095,
+        ),
+        netProfitMarginAnnual: Some(
+            10.69849,
+        ),
+        netProfitMarginTTM: Some(
+            10.69849,
+        ),
+        operatingMargin5Y: Some(
+            12.29068,
+        ),
+        operatingMarginAnnual: Some(
+            18.34405,
+        ),
+        operatingMarginTTM: Some(
+            18.34405,
+        ),
+        payoutRatioAnnual: Some(
+            0.0,
+        ),
+        payoutRatioTTM: Some(
+            0.0,
+        ),
+        pbAnnual: Some(
+            21.87571,
+        ),
+        pbQuarterly: Some(
+            21.87571,
+        ),
+        pcfShareTTM: Some(
+            17.80269,
+        ),
+        peBasicExclExtraTTM: Some(
+            89.13274,
+        ),
+        peExclExtraAnnual: Some(
+            92.82884,
+        ),
+        peExclExtraHighTTM: Some(
+            353.3458,
+        ),
+        peExclExtraTTM: Some(
+            92.81166,
+        ),
+        peExclLowTTM: Some(
+            80.61424,
+        ),
+        peInclExtraTTM: Some(
+            89.88834,
+        ),
+        peNormalizedAnnual: Some(
+            69.06225,
+        ),
+        pfcfShareAnnual: Some(
+            125.4747,
+        ),
+        pfcfShareTTM: Some(
+            125.4747,
+        ),
+        pretaxMargin5Y: Some(
+            8.87915,
+        ),
+        pretaxMarginAnnual: Some(
+            12.79942,
+        ),
+        pretaxMarginTTM: Some(
+            12.79942,
+        ),
+        priceRelativeToSP500_13Week: Some(
+            -1.18895,
+        ),
+        priceRelativeToSP50026Week: Some(
+            -14.29435,
+        ),
+        priceRelativeToSP500_4Week: Some(
+            -0.2355,
+        ),
+        priceRelativeToSP500_52Week: Some(
+            -16.75977,
+        ),
+        priceRelativeToSP500_Ytd: Some(
+            -9.29506,
+        ),
+        psAnnual: Some(
+            9.68393,
+        ),
+        psTTM: Some(
+            9.68393,
+        ),
+        ptbvAnnual: None,
+        ptbvQuarterly: None,
+        quickRatioAnnual: None,
+        quickRatioQuarterly: None,
+        receivablesTurnoverAnnual: Some(
+            46.93134,
+        ),
+        receivablesTurnoverTTM: Some(
+            46.93134,
+        ),
+        revenueEmployeeAnnual: Some(
+            2777340.0,
+        ),
+        revenueEmployeeTTM: Some(
+            2659155.0,
+        ),
+        revenueGrowth3Y: Some(
+            28.82059,
+        ),
+        revenueGrowth5Y: Some(
+            29.81791,
+        ),
+        revenueGrowthQuarterlyYoy: Some(
+            21.52761,
+        ),
+        revenueGrowthTTMYoy: Some(
+            24.01023,
+        ),
+        revenuePerShareAnnual: Some(
+            55.03218,
+        ),
+        revenuePerShareTTM: Some(
+            55.03251,
+        ),
+        revenueShareGrowth5Y: Some(
+            28.78692,
+        ),
+        roaRfy: Some(
+            7.30097,
+        ),
+        roaa5Y: Some(
+            5.4741,
+        ),
+        roae5Y: Some(
+            24.95677,
+        ),
+        roaeTTM: Some(
+            28.68176,
+        ),
+        roeRfy: Some(
+            28.68176,
+        ),
+        roeTTM: Some(
+            7.30097,
+        ),
+        roi5Y: Some(
+            7.27737,
+        ),
+        roiAnnual: Some(
+            9.12781,
+        ),
+        roiTTM: Some(
+            9.12781,
+        ),
+        tangibleBookValuePerShareAnnual: Some(
+            -32.32979,
+        ),
+        tangibleBookValuePerShareQuarterly: Some(
+            -32.32979,
+        ),
+        tbvCagr5Y: None,
+        totalDebt_totalEquityAnnual: Some(
+            147.3892,
+        ),
+        totalDebt_totalEquityQuarterly: Some(
+            147.3892,
+        ),
+        totalDebtCagr5Y: Some(
+            46.69995,
+        ),
+        yearToDatePriceReturnDaily: Some(
+            1.07447,
+        ),
+    },
+    metricType: "all",
+    symbol: "NFLX",
+}

@@ -1,0 +1,13 @@
+CompanyProfile {
+    country: "US",
+    currency: "USD",
+    exchange: "NASDAQ NMS - GLOBAL MARKET",
+    ipo: "2010-06-29",
+    name: "Tesla Inc",
+    phone: "16506815000.0",
+    shareOutstanding: 959.853504,
+    ticker: "TSLA",
+    weburl: "https://www.tesla.com/",
+    logo: "https://finnhub.io/api/logo?symbol=TSLA",
+    finnhubIndustry: "Automobiles",
+}
