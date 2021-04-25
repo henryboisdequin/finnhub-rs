@@ -1,0 +1,13 @@
+CompanyProfile {
+    country: "US",
+    currency: "USD",
+    exchange: "NASDAQ NMS - GLOBAL MARKET",
+    ipo: "1997-05-15",
+    name: "Amazon.com Inc",
+    phone: "12062661000.0",
+    shareOutstanding: 504.116631,
+    ticker: "AMZN",
+    weburl: "http://www.amazon.com/",
+    logo: "https://finnhub.io/api/logo?symbol=AMZN",
+    finnhubIndustry: "Retail",
+}

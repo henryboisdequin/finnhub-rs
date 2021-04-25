@@ -1,18 +1,24 @@
-#[derive(Debug)]
+/// Structure for composing urls from a root, endpoint, and parameters.
+/// Also, generates test filenames based on urls.
+#[derive(Debug, Clone)]
 pub struct UrlBuilder {
     /// Root URL
     root: String,
 }
 
 impl UrlBuilder {
+    /// Generate a new builder who will construct urls based on 'root'. This enables flexibility
+    /// for things like a test server.
     pub fn new(root: &str) -> Self {
         Self { root: root.to_string() }
     }
 
+    /// Given an endpoint and url parameters, construct a url string with this object's root.
     pub fn url(&self, endpoint: &str, params: &Vec<(&str, String)>) -> String {
         format!("{}/{}?{}", &self.root, endpoint, UrlBuilder::join_params(params))
     }
 
+    /// Create a url parameter string.
     fn join_params(params: &Vec<(&str, String)>) -> String {
         if params.is_empty() {
             "".to_string()
@@ -23,6 +29,37 @@ impl UrlBuilder {
                 .collect::<Vec<String>>()
                 .join("&")
         }
+    }
+
+    /// Generate a 'replay' filename for testing.
+    #[cfg(test)]
+    pub fn replay_filename(&self, url: String) -> String {
+        self.test_filename(url, "replay".into())
+    }
+
+    /// Generate an 'expected' filename for testing.
+    #[cfg(test)]
+    pub fn expected_filename(&self, url: String) -> String {
+        self.test_filename(url, "expected".into())
+    }
+
+    /// Create a filename based on an endpoint in 'url'. Give filename extension, 'extension'.
+    #[cfg(test)]
+    pub fn test_filename(&self, url: String, extension: String) -> String {
+        use regex::Regex;
+        use crate::utils::get_dummy_api_key;
+
+        // Chop off the root.
+        let root_len = self.root.len() + 1; // include '/'
+        let rootless_name = &url[root_len..];
+
+        // Replace the token with dummy token.
+        let re = Regex::new(r"token=[0-9A-Za-z]+").unwrap();
+        let dummy_token = format!("token={}", get_dummy_api_key());
+        let name = re.replace_all(rootless_name, dummy_token);
+
+        // Path from root.
+        format!("test/{}.{}", name, extension)
     }
 }
 

@@ -1,0 +1,113 @@
+SymbolLookup {
+    count: 18,
+    result: [
+        Results {
+            description: "APPLE INC",
+            displaySymbol: "AAPL",
+            symbol: "AAPL",
+            _type: "Common Stock",
+        },
+        Results {
+            description: "APPLE INC",
+            displaySymbol: "AAPL.SW",
+            symbol: "AAPL.SW",
+            _type: "Common Stock",
+        },
+        Results {
+            description: "APPLE INC",
+            displaySymbol: "AAPL.SN",
+            symbol: "AAPL.SN",
+            _type: "Common Stock",
+        },
+        Results {
+            description: "APPLE INC",
+            displaySymbol: "AAPL.VI",
+            symbol: "AAPL.VI",
+            _type: "Common Stock",
+        },
+        Results {
+            description: "APPLE INC",
+            displaySymbol: "AAPL.MI",
+            symbol: "AAPL.MI",
+            _type: "Common Stock",
+        },
+        Results {
+            description: "APPLE INC",
+            displaySymbol: "AAPL.BC",
+            symbol: "AAPL.BC",
+            _type: "Common Stock",
+        },
+        Results {
+            description: "AA PLC",
+            displaySymbol: "AATDF",
+            symbol: "AATDF",
+            _type: "Common Stock",
+        },
+        Results {
+            description: "Pamapol",
+            displaySymbol: "0LXG.L",
+            symbol: "0LXG.L",
+            _type: "",
+        },
+        Results {
+            description: "Aviva Plc",
+            displaySymbol: "34XX.L",
+            symbol: "34XX.L",
+            _type: "",
+        },
+        Results {
+            description: "Aviva Plc",
+            displaySymbol: "77EB.L",
+            symbol: "77EB.L",
+            _type: "",
+        },
+        Results {
+            description: "Aviva Plc",
+            displaySymbol: "59KF.L",
+            symbol: "59KF.L",
+            _type: "",
+        },
+        Results {
+            description: "Aviva Plc",
+            displaySymbol: "11GV.L",
+            symbol: "11GV.L",
+            _type: "",
+        },
+        Results {
+            description: "Makaron Pl",
+            displaySymbol: "0LVQ.L",
+            symbol: "0LVQ.L",
+            _type: "",
+        },
+        Results {
+            description: "Aviva Plc",
+            displaySymbol: "51IE.L",
+            symbol: "51IE.L",
+            _type: "",
+        },
+        Results {
+            description: "ALLA PCL",
+            displaySymbol: "ALLA.BK",
+            symbol: "ALLA.BK",
+            _type: "Common Stock",
+        },
+        Results {
+            description: "SAGA PLC",
+            displaySymbol: "65J.MU",
+            symbol: "65J.MU",
+            _type: "Common Stock",
+        },
+        Results {
+            description: "Aviva PLC",
+            displaySymbol: "AV.A.L",
+            symbol: "AV.A.L",
+            _type: "",
+        },
+        Results {
+            description: "Barclays plc",
+            displaySymbol: "31PD.L",
+            symbol: "31PD.L",
+            _type: "",
+        },
+    ],
+}

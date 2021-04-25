@@ -1,0 +1,13 @@
+CompanyProfile {
+    country: "US",
+    currency: "USD",
+    exchange: "NASDAQ NMS - GLOBAL MARKET",
+    ipo: "1986-03-13",
+    name: "Microsoft Corp",
+    phone: "14258828080.0",
+    shareOutstanding: 7542.215767,
+    ticker: "MSFT",
+    weburl: "https://www.microsoft.com/en-us",
+    logo: "https://finnhub.io/api/logo?symbol=MSFT",
+    finnhubIndustry: "Technology",
+}
