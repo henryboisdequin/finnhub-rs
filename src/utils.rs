@@ -1,4 +1,4 @@
-/// Acquires and api key from an environment file or .env file via a variable named, TEST_API_KEY.
+/// Acquires and api key from an environment or .env file via a variable named, TEST_API_KEY.
 #[allow(dead_code)]
 pub fn get_test_api_key() -> String {
     use dotenv::dotenv;
