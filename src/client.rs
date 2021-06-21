@@ -130,6 +130,14 @@ impl Client {
         ).await
     }
 
+    /// Returns rates for all forex pairs. Ideal for currency conversion
+    pub async fn forex_rates(&self, base: String) -> Result<(ForexRates, Url), ExitFailure>{
+        self.get::<ForexRates>(
+            "forex/rates",
+            &mut vec![("base", base)],
+        ).await
+    }
+
     /// Compose the URL, make the request, and return the specified type.
     pub async fn get<T: DeserializeOwned>(
         &self,

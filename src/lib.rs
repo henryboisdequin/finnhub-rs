@@ -172,4 +172,11 @@ mod test {
             client.basic_financials("NFLX".into()).await
         });
     }
+
+    #[tokio::test]
+    async fn forex_rates() {
+        api_test!(|client: Client| async move {
+            client.forex_rates("USD".into()).await
+        });
+    }
 }

@@ -2,6 +2,8 @@
 
 use serde_derive::{Deserialize, Serialize};
 use strum_macros::Display;
+use std::collections::{HashMap, BTreeMap};
+use serde::{Deserializer, Deserialize};
 
 #[derive(Serialize, Deserialize, Debug)]
 pub struct SymbolLookup {
@@ -322,4 +324,12 @@ pub enum ProfileToParam {
     ISIN,
     #[strum(serialize = "cusip")]
     CUSIP,
+}
+
+
+#[derive(Serialize, Deserialize, Debug)]
+pub struct ForexRates {
+    pub base: String,
+    #[serde(flatten,deserialize_with = "super::utils::extract_conversion_pairs")]
+    pub quote: BTreeMap<String, f64>,
 }
