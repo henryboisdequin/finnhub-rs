@@ -333,3 +333,11 @@ pub struct ForexRates {
     #[serde(flatten,deserialize_with = "super::utils::extract_conversion_pairs")]
     pub quote: BTreeMap<String, f64>,
 }
+
+#[derive(Serialize, Deserialize, Debug)]
+pub struct ForexSymbol {
+    description: String,
+    #[serde(rename = "displaySymbol")]
+    display_symbol: String,
+    symbol: String,
+}

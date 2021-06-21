@@ -130,11 +130,27 @@ impl Client {
         ).await
     }
 
-    /// Returns rates for all forex pairs. Ideal for currency conversion
+    /// Returns the rates for all forex pairs. Ideal for currency conversion
     pub async fn forex_rates(&self, base: String) -> Result<(ForexRates, Url), ExitFailure>{
         self.get::<ForexRates>(
             "forex/rates",
             &mut vec![("base", base)],
+        ).await
+    }
+
+    /// Returns a list of supported forex exchanges
+    pub async fn forex_exchanges(&self) -> Result<(Vec<String>, Url), ExitFailure>{
+        self.get::<Vec<String>>(
+            "forex/exchange",
+            &mut vec![],
+        ).await
+    }
+
+    /// Returns a list of supported forex symbols.
+    pub async fn forex_symbol(&self, exchange: String) -> Result<(Vec<ForexSymbol>, Url), ExitFailure>{
+        self.get::<Vec<ForexSymbol>>(
+            "forex/symbol",
+            &mut vec![("exchange", exchange)],
         ).await
     }
 
