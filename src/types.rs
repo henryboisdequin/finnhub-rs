@@ -2,8 +2,7 @@
 
 use serde_derive::{Deserialize, Serialize};
 use strum_macros::Display;
-use std::collections::{HashMap, BTreeMap};
-use serde::{Deserializer, Deserialize};
+use std::collections::{BTreeMap};
 
 #[derive(Serialize, Deserialize, Debug)]
 pub struct SymbolLookup {
