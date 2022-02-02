@@ -172,4 +172,25 @@ mod test {
             client.basic_financials("NFLX".into()).await
         });
     }
+
+    #[tokio::test]
+    async fn forex_rates() {
+        api_test!(|client: Client| async move {
+            client.forex_rates("USD".into()).await
+        });
+    }
+
+    #[tokio::test]
+    async fn forex_exchanges() {
+        api_test!(|client: Client| async move {
+            client.forex_exchanges().await
+        });
+    }
+
+    #[tokio::test]
+    async fn forex_symbol() {
+        api_test!(|client: Client| async move {
+            client.forex_symbol("oanda".into()).await
+        });
+    }
 }

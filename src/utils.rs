@@ -43,5 +43,40 @@ pub fn clean_key_from_file(filename: String, key: String) {
 #[cfg(test)]
 pub fn load_expected_from_replay_filename(replay_filename: String) -> String {
     let expected_filename = replay_filename.replace(".replay", ".expected");
-    std::fs::read_to_string(expected_filename).unwrap().trim().into()
+    std::fs::read_to_string(expected_filename)
+        .unwrap()
+        .trim()
+        .into()
+}
+
+/// Will create a data structure from the forex conversion pairs
+pub fn extract_conversion_pairs<'de, D>(
+    deserializer: D,
+) -> Result<std::collections::BTreeMap<String, f64>, D::Error>
+where
+    D: serde::Deserializer<'de>,
+{
+    let value: serde_json::Value = serde::Deserialize::deserialize(deserializer)?;
+
+    let mut re_map: std::collections::BTreeMap<String, f64> = std::collections::BTreeMap::new();
+
+    if value.is_object() && value.get("quote").is_some() {
+        // Now we can extract the quote pairs
+        let quote_pairs = value.get("quote").unwrap();
+
+        for quote_pair in quote_pairs.as_object().unwrap().iter() {
+            if quote_pair.1.is_number() {
+                if quote_pair.1.is_f64() {
+                    re_map.insert(String::from(quote_pair.0), quote_pair.1.as_f64().unwrap());
+                } else if quote_pair.1.is_i64() {
+                    re_map.insert(
+                        String::from(quote_pair.0),
+                        quote_pair.1.as_i64().unwrap() as f64,
+                    );
+                }
+            }
+        }
+    }
+
+    return Ok(re_map);
 }

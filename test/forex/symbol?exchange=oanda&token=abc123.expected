@@ -1,0 +1,612 @@
+[
+    ForexSymbol {
+        description: "Oanda EUR/CHF",
+        display_symbol: "EUR/CHF",
+        symbol: "OANDA:EUR_CHF",
+    },
+    ForexSymbol {
+        description: "Oanda USD/SEK",
+        display_symbol: "USD/SEK",
+        symbol: "OANDA:USD_SEK",
+    },
+    ForexSymbol {
+        description: "Oanda Gold/CHF",
+        display_symbol: "XAU/CHF",
+        symbol: "OANDA:XAU_CHF",
+    },
+    ForexSymbol {
+        description: "Oanda EUR/PLN",
+        display_symbol: "EUR/PLN",
+        symbol: "OANDA:EUR_PLN",
+    },
+    ForexSymbol {
+        description: "Oanda US T-Bond",
+        display_symbol: "USB30Y/USD",
+        symbol: "OANDA:USB30Y_USD",
+    },
+    ForexSymbol {
+        description: "Oanda Gold",
+        display_symbol: "XAU/USD",
+        symbol: "OANDA:XAU_USD",
+    },
+    ForexSymbol {
+        description: "Oanda SGD/CHF",
+        display_symbol: "SGD/CHF",
+        symbol: "OANDA:SGD_CHF",
+    },
+    ForexSymbol {
+        description: "Oanda USD/CZK",
+        display_symbol: "USD/CZK",
+        symbol: "OANDA:USD_CZK",
+    },
+    ForexSymbol {
+        description: "Oanda Europe 50",
+        display_symbol: "EU50/EUR",
+        symbol: "OANDA:EU50_EUR",
+    },
+    ForexSymbol {
+        description: "Oanda US 5Y T-Note",
+        display_symbol: "USB05Y/USD",
+        symbol: "OANDA:USB05Y_USD",
+    },
+    ForexSymbol {
+        description: "Oanda UK 10Y Gilt",
+        display_symbol: "UK10YB/GBP",
+        symbol: "OANDA:UK10YB_GBP",
+    },
+    ForexSymbol {
+        description: "Oanda Silver/HKD",
+        display_symbol: "XAG/HKD",
+        symbol: "OANDA:XAG_HKD",
+    },
+    ForexSymbol {
+        description: "Oanda Platinum",
+        display_symbol: "XPT/USD",
+        symbol: "OANDA:XPT_USD",
+    },
+    ForexSymbol {
+        description: "Oanda USD/INR",
+        display_symbol: "USD/INR",
+        symbol: "OANDA:USD_INR",
+    },
+    ForexSymbol {
+        description: "Oanda USD/PLN",
+        display_symbol: "USD/PLN",
+        symbol: "OANDA:USD_PLN",
+    },
+    ForexSymbol {
+        description: "Oanda USD/HKD",
+        display_symbol: "USD/HKD",
+        symbol: "OANDA:USD_HKD",
+    },
+    ForexSymbol {
+        description: "Oanda AUD/USD",
+        display_symbol: "AUD/USD",
+        symbol: "OANDA:AUD_USD",
+    },
+    ForexSymbol {
+        description: "Oanda Silver/CAD",
+        display_symbol: "XAG/CAD",
+        symbol: "OANDA:XAG_CAD",
+    },
+    ForexSymbol {
+        description: "Oanda Silver/JPY",
+        display_symbol: "XAG/JPY",
+        symbol: "OANDA:XAG_JPY",
+    },
+    ForexSymbol {
+        description: "Oanda Wheat",
+        display_symbol: "WHEAT/USD",
+        symbol: "OANDA:WHEAT_USD",
+    },
+    ForexSymbol {
+        description: "Oanda Palladium",
+        display_symbol: "XPD/USD",
+        symbol: "OANDA:XPD_USD",
+    },
+    ForexSymbol {
+        description: "Oanda USD/DKK",
+        display_symbol: "USD/DKK",
+        symbol: "OANDA:USD_DKK",
+    },
+    ForexSymbol {
+        description: "Oanda CAD/HKD",
+        display_symbol: "CAD/HKD",
+        symbol: "OANDA:CAD_HKD",
+    },
+    ForexSymbol {
+        description: "Oanda EUR/CZK",
+        display_symbol: "EUR/CZK",
+        symbol: "OANDA:EUR_CZK",
+    },
+    ForexSymbol {
+        description: "Oanda USD/HUF",
+        display_symbol: "USD/HUF",
+        symbol: "OANDA:USD_HUF",
+    },
+    ForexSymbol {
+        description: "Oanda France 40",
+        display_symbol: "FR40/EUR",
+        symbol: "OANDA:FR40_EUR",
+    },
+    ForexSymbol {
+        description: "Oanda USD/ZAR",
+        display_symbol: "USD/ZAR",
+        symbol: "OANDA:USD_ZAR",
+    },
+    ForexSymbol {
+        description: "Oanda USD/JPY",
+        display_symbol: "USD/JPY",
+        symbol: "OANDA:USD_JPY",
+    },
+    ForexSymbol {
+        description: "Oanda Gold/EUR",
+        display_symbol: "XAU/EUR",
+        symbol: "OANDA:XAU_EUR",
+    },
+    ForexSymbol {
+        description: "Oanda EUR/AUD",
+        display_symbol: "EUR/AUD",
+        symbol: "OANDA:EUR_AUD",
+    },
+    ForexSymbol {
+        description: "Oanda Silver/GBP",
+        display_symbol: "XAG/GBP",
+        symbol: "OANDA:XAG_GBP",
+    },
+    ForexSymbol {
+        description: "Oanda EUR/SEK",
+        display_symbol: "EUR/SEK",
+        symbol: "OANDA:EUR_SEK",
+    },
+    ForexSymbol {
+        description: "Oanda NZD/SGD",
+        display_symbol: "NZD/SGD",
+        symbol: "OANDA:NZD_SGD",
+    },
+    ForexSymbol {
+        description: "Oanda US Nas 100",
+        display_symbol: "NAS100/USD",
+        symbol: "OANDA:NAS100_USD",
+    },
+    ForexSymbol {
+        description: "Oanda Natural Gas",
+        display_symbol: "NATGAS/USD",
+        symbol: "OANDA:NATGAS_USD",
+    },
+    ForexSymbol {
+        description: "Oanda GBP/CHF",
+        display_symbol: "GBP/CHF",
+        symbol: "OANDA:GBP_CHF",
+    },
+    ForexSymbol {
+        description: "Oanda CHF/JPY",
+        display_symbol: "CHF/JPY",
+        symbol: "OANDA:CHF_JPY",
+    },
+    ForexSymbol {
+        description: "Oanda Singapore 30",
+        display_symbol: "SG30/SGD",
+        symbol: "OANDA:SG30_SGD",
+    },
+    ForexSymbol {
+        description: "Oanda Silver/SGD",
+        display_symbol: "XAG/SGD",
+        symbol: "OANDA:XAG_SGD",
+    },
+    ForexSymbol {
+        description: "Oanda Brent Crude Oil",
+        display_symbol: "BCO/USD",
+        symbol: "OANDA:BCO_USD",
+    },
+    ForexSymbol {
+        description: "Oanda Germany 30",
+        display_symbol: "DE30/EUR",
+        symbol: "OANDA:DE30_EUR",
+    },
+    ForexSymbol {
+        description: "Oanda Taiwan Index",
+        display_symbol: "TWIX/USD",
+        symbol: "OANDA:TWIX_USD",
+    },
+    ForexSymbol {
+        description: "Oanda Copper",
+        display_symbol: "XCU/USD",
+        symbol: "OANDA:XCU_USD",
+    },
+    ForexSymbol {
+        description: "Oanda CHF/HKD",
+        display_symbol: "CHF/HKD",
+        symbol: "OANDA:CHF_HKD",
+    },
+    ForexSymbol {
+        description: "Oanda Gold/GBP",
+        display_symbol: "XAU/GBP",
+        symbol: "OANDA:XAU_GBP",
+    },
+    ForexSymbol {
+        description: "Oanda USD/MXN",
+        display_symbol: "USD/MXN",
+        symbol: "OANDA:USD_MXN",
+    },
+    ForexSymbol {
+        description: "Oanda US Wall St 30",
+        display_symbol: "US30/USD",
+        symbol: "OANDA:US30_USD",
+    },
+    ForexSymbol {
+        description: "Oanda NZD/JPY",
+        display_symbol: "NZD/JPY",
+        symbol: "OANDA:NZD_JPY",
+    },
+    ForexSymbol {
+        description: "Oanda CAD/CHF",
+        display_symbol: "CAD/CHF",
+        symbol: "OANDA:CAD_CHF",
+    },
+    ForexSymbol {
+        description: "Oanda Hong Kong 33",
+        display_symbol: "HK33/HKD",
+        symbol: "OANDA:HK33_HKD",
+    },
+    ForexSymbol {
+        description: "Oanda US 10Y T-Note",
+        display_symbol: "USB10Y/USD",
+        symbol: "OANDA:USB10Y_USD",
+    },
+    ForexSymbol {
+        description: "Oanda Gold/Silver",
+        display_symbol: "XAU/XAG",
+        symbol: "OANDA:XAU_XAG",
+    },
+    ForexSymbol {
+        description: "Oanda AUD/JPY",
+        display_symbol: "AUD/JPY",
+        symbol: "OANDA:AUD_JPY",
+    },
+    ForexSymbol {
+        description: "Oanda GBP/USD",
+        display_symbol: "GBP/USD",
+        symbol: "OANDA:GBP_USD",
+    },
+    ForexSymbol {
+        description: "Oanda USD/NOK",
+        display_symbol: "USD/NOK",
+        symbol: "OANDA:USD_NOK",
+    },
+    ForexSymbol {
+        description: "Oanda EUR/JPY",
+        display_symbol: "EUR/JPY",
+        symbol: "OANDA:EUR_JPY",
+    },
+    ForexSymbol {
+        description: "Oanda EUR/HKD",
+        display_symbol: "EUR/HKD",
+        symbol: "OANDA:EUR_HKD",
+    },
+    ForexSymbol {
+        description: "Oanda HKD/JPY",
+        display_symbol: "HKD/JPY",
+        symbol: "OANDA:HKD_JPY",
+    },
+    ForexSymbol {
+        description: "Oanda GBP/SGD",
+        display_symbol: "GBP/SGD",
+        symbol: "OANDA:GBP_SGD",
+    },
+    ForexSymbol {
+        description: "Oanda Gold/NZD",
+        display_symbol: "XAU/NZD",
+        symbol: "OANDA:XAU_NZD",
+    },
+    ForexSymbol {
+        description: "Oanda NZD/CHF",
+        display_symbol: "NZD/CHF",
+        symbol: "OANDA:NZD_CHF",
+    },
+    ForexSymbol {
+        description: "Oanda Silver/CHF",
+        display_symbol: "XAG/CHF",
+        symbol: "OANDA:XAG_CHF",
+    },
+    ForexSymbol {
+        description: "Oanda US SPX 500",
+        display_symbol: "SPX500/USD",
+        symbol: "OANDA:SPX500_USD",
+    },
+    ForexSymbol {
+        description: "Oanda Gold/JPY",
+        display_symbol: "XAU/JPY",
+        symbol: "OANDA:XAU_JPY",
+    },
+    ForexSymbol {
+        description: "Oanda CHF/ZAR",
+        display_symbol: "CHF/ZAR",
+        symbol: "OANDA:CHF_ZAR",
+    },
+    ForexSymbol {
+        description: "Oanda Gold/CAD",
+        display_symbol: "XAU/CAD",
+        symbol: "OANDA:XAU_CAD",
+    },
+    ForexSymbol {
+        description: "Oanda Gold/HKD",
+        display_symbol: "XAU/HKD",
+        symbol: "OANDA:XAU_HKD",
+    },
+    ForexSymbol {
+        description: "Oanda Japan 225",
+        display_symbol: "JP225/USD",
+        symbol: "OANDA:JP225_USD",
+    },
+    ForexSymbol {
+        description: "Oanda Sugar",
+        display_symbol: "SUGAR/USD",
+        symbol: "OANDA:SUGAR_USD",
+    },
+    ForexSymbol {
+        description: "Oanda SGD/JPY",
+        display_symbol: "SGD/JPY",
+        symbol: "OANDA:SGD_JPY",
+    },
+    ForexSymbol {
+        description: "Oanda AUD/HKD",
+        display_symbol: "AUD/HKD",
+        symbol: "OANDA:AUD_HKD",
+    },
+    ForexSymbol {
+        description: "Oanda EUR/ZAR",
+        display_symbol: "EUR/ZAR",
+        symbol: "OANDA:EUR_ZAR",
+    },
+    ForexSymbol {
+        description: "Oanda EUR/NOK",
+        display_symbol: "EUR/NOK",
+        symbol: "OANDA:EUR_NOK",
+    },
+    ForexSymbol {
+        description: "Oanda Australia 200",
+        display_symbol: "AU200/AUD",
+        symbol: "OANDA:AU200_AUD",
+    },
+    ForexSymbol {
+        description: "Oanda EUR/SGD",
+        display_symbol: "EUR/SGD",
+        symbol: "OANDA:EUR_SGD",
+    },
+    ForexSymbol {
+        description: "Oanda Bund",
+        display_symbol: "DE10YB/EUR",
+        symbol: "OANDA:DE10YB_EUR",
+    },
+    ForexSymbol {
+        description: "Oanda Gold/SGD",
+        display_symbol: "XAU/SGD",
+        symbol: "OANDA:XAU_SGD",
+    },
+    ForexSymbol {
+        description: "Oanda USD/CNH",
+        display_symbol: "USD/CNH",
+        symbol: "OANDA:USD_CNH",
+    },
+    ForexSymbol {
+        description: "Oanda Silver",
+        display_symbol: "XAG/USD",
+        symbol: "OANDA:XAG_USD",
+    },
+    ForexSymbol {
+        description: "Oanda West Texas Oil",
+        display_symbol: "WTICO/USD",
+        symbol: "OANDA:WTICO_USD",
+    },
+    ForexSymbol {
+        description: "Oanda GBP/ZAR",
+        display_symbol: "GBP/ZAR",
+        symbol: "OANDA:GBP_ZAR",
+    },
+    ForexSymbol {
+        description: "Oanda Netherlands 25",
+        display_symbol: "NL25/EUR",
+        symbol: "OANDA:NL25_EUR",
+    },
+    ForexSymbol {
+        description: "Oanda Soybeans",
+        display_symbol: "SOYBN/USD",
+        symbol: "OANDA:SOYBN_USD",
+    },
+    ForexSymbol {
+        description: "Oanda AUD/NZD",
+        display_symbol: "AUD/NZD",
+        symbol: "OANDA:AUD_NZD",
+    },
+    ForexSymbol {
+        description: "Oanda ZAR/JPY",
+        display_symbol: "ZAR/JPY",
+        symbol: "OANDA:ZAR_JPY",
+    },
+    ForexSymbol {
+        description: "Oanda Silver/NZD",
+        display_symbol: "XAG/NZD",
+        symbol: "OANDA:XAG_NZD",
+    },
+    ForexSymbol {
+        description: "Oanda GBP/HKD",
+        display_symbol: "GBP/HKD",
+        symbol: "OANDA:GBP_HKD",
+    },
+    ForexSymbol {
+        description: "Oanda UK 100",
+        display_symbol: "UK100/GBP",
+        symbol: "OANDA:UK100_GBP",
+    },
+    ForexSymbol {
+        description: "Oanda Silver/AUD",
+        display_symbol: "XAG/AUD",
+        symbol: "OANDA:XAG_AUD",
+    },
+    ForexSymbol {
+        description: "Oanda EUR/HUF",
+        display_symbol: "EUR/HUF",
+        symbol: "OANDA:EUR_HUF",
+    },
+    ForexSymbol {
+        description: "Oanda USD/TRY",
+        display_symbol: "USD/TRY",
+        symbol: "OANDA:USD_TRY",
+    },
+    ForexSymbol {
+        description: "Oanda GBP/AUD",
+        display_symbol: "GBP/AUD",
+        symbol: "OANDA:GBP_AUD",
+    },
+    ForexSymbol {
+        description: "Oanda Corn",
+        display_symbol: "CORN/USD",
+        symbol: "OANDA:CORN_USD",
+    },
+    ForexSymbol {
+        description: "Oanda AUD/SGD",
+        display_symbol: "AUD/SGD",
+        symbol: "OANDA:AUD_SGD",
+    },
+    ForexSymbol {
+        description: "Oanda AUD/CHF",
+        display_symbol: "AUD/CHF",
+        symbol: "OANDA:AUD_CHF",
+    },
+    ForexSymbol {
+        description: "Oanda USD/CAD",
+        display_symbol: "USD/CAD",
+        symbol: "OANDA:USD_CAD",
+    },
+    ForexSymbol {
+        description: "Oanda GBP/PLN",
+        display_symbol: "GBP/PLN",
+        symbol: "OANDA:GBP_PLN",
+    },
+    ForexSymbol {
+        description: "Oanda CAD/JPY",
+        display_symbol: "CAD/JPY",
+        symbol: "OANDA:CAD_JPY",
+    },
+    ForexSymbol {
+        description: "Oanda EUR/USD",
+        display_symbol: "EUR/USD",
+        symbol: "OANDA:EUR_USD",
+    },
+    ForexSymbol {
+        description: "Oanda Gold/AUD",
+        display_symbol: "XAU/AUD",
+        symbol: "OANDA:XAU_AUD",
+    },
+    ForexSymbol {
+        description: "Oanda AUD/CAD",
+        display_symbol: "AUD/CAD",
+        symbol: "OANDA:AUD_CAD",
+    },
+    ForexSymbol {
+        description: "Oanda NZD/USD",
+        display_symbol: "NZD/USD",
+        symbol: "OANDA:NZD_USD",
+    },
+    ForexSymbol {
+        description: "Oanda GBP/CAD",
+        display_symbol: "GBP/CAD",
+        symbol: "OANDA:GBP_CAD",
+    },
+    ForexSymbol {
+        description: "Oanda EUR/DKK",
+        display_symbol: "EUR/DKK",
+        symbol: "OANDA:EUR_DKK",
+    },
+    ForexSymbol {
+        description: "Oanda China A50",
+        display_symbol: "CN50/USD",
+        symbol: "OANDA:CN50_USD",
+    },
+    ForexSymbol {
+        description: "Oanda US Russ 2000",
+        display_symbol: "US2000/USD",
+        symbol: "OANDA:US2000_USD",
+    },
+    ForexSymbol {
+        description: "Oanda EUR/NZD",
+        display_symbol: "EUR/NZD",
+        symbol: "OANDA:EUR_NZD",
+    },
+    ForexSymbol {
+        description: "Oanda TRY/JPY",
+        display_symbol: "TRY/JPY",
+        symbol: "OANDA:TRY_JPY",
+    },
+    ForexSymbol {
+        description: "Oanda NZD/HKD",
+        display_symbol: "NZD/HKD",
+        symbol: "OANDA:NZD_HKD",
+    },
+    ForexSymbol {
+        description: "Oanda NZD/CAD",
+        display_symbol: "NZD/CAD",
+        symbol: "OANDA:NZD_CAD",
+    },
+    ForexSymbol {
+        description: "Oanda USD/THB",
+        display_symbol: "USD/THB",
+        symbol: "OANDA:USD_THB",
+    },
+    ForexSymbol {
+        description: "Oanda US 2Y T-Note",
+        display_symbol: "USB02Y/USD",
+        symbol: "OANDA:USB02Y_USD",
+    },
+    ForexSymbol {
+        description: "Oanda EUR/CAD",
+        display_symbol: "EUR/CAD",
+        symbol: "OANDA:EUR_CAD",
+    },
+    ForexSymbol {
+        description: "Oanda EUR/TRY",
+        display_symbol: "EUR/TRY",
+        symbol: "OANDA:EUR_TRY",
+    },
+    ForexSymbol {
+        description: "Oanda USD/SGD",
+        display_symbol: "USD/SGD",
+        symbol: "OANDA:USD_SGD",
+    },
+    ForexSymbol {
+        description: "Oanda USD/CHF",
+        display_symbol: "USD/CHF",
+        symbol: "OANDA:USD_CHF",
+    },
+    ForexSymbol {
+        description: "Oanda EUR/GBP",
+        display_symbol: "EUR/GBP",
+        symbol: "OANDA:EUR_GBP",
+    },
+    ForexSymbol {
+        description: "Oanda CAD/SGD",
+        display_symbol: "CAD/SGD",
+        symbol: "OANDA:CAD_SGD",
+    },
+    ForexSymbol {
+        description: "Oanda Silver/EUR",
+        display_symbol: "XAG/EUR",
+        symbol: "OANDA:XAG_EUR",
+    },
+    ForexSymbol {
+        description: "Oanda GBP/NZD",
+        display_symbol: "GBP/NZD",
+        symbol: "OANDA:GBP_NZD",
+    },
+    ForexSymbol {
+        description: "Oanda GBP/JPY",
+        display_symbol: "GBP/JPY",
+        symbol: "OANDA:GBP_JPY",
+    },
+    ForexSymbol {
+        description: "Oanda India 50",
+        display_symbol: "IN50/USD",
+        symbol: "OANDA:IN50_USD",
+    },
+]
