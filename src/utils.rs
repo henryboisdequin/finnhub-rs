@@ -49,7 +49,7 @@ pub fn load_expected_from_replay_filename(replay_filename: String) -> String {
         .into()
 }
 
-/// Will create a data structure from the forex conversion pairs
+/// Will create a data structure from the Forex conversion pairs
 pub fn extract_conversion_pairs<'de, D>(
     deserializer: D,
 ) -> Result<std::collections::BTreeMap<String, f64>, D::Error>
