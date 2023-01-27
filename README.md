@@ -7,10 +7,10 @@ Rust client for the [Finnhub API](https://finnhub.io/). Finnhub is a new Stock A
 ## Minimal Example:
 
 ```rust
-// Use finnhub-rs client.
-use finnhub_rs::client::Client;
-use dotenv::dotenv;
 use std::env;
+
+use dotenv::dotenv;
+use finnhub_rs::{client::Client, types::Resolution};
 
 #[tokio::main]
 async fn main() {
@@ -23,6 +23,13 @@ async fn main() {
     let res = client.stock_symbol("US".to_string()).await.unwrap();
     // Print out the results.
     println!("{:#?}", res);
+    // Get a CandleStick response
+    let candle_res = client
+        .stock_candles("MD".to_string(), 1590988249, 1591852249, Resolution::OneDay)
+        .await
+        .unwrap();
+    // Print out the results.
+    println!("{:#?}", candle_res);
 }
 ```
 
