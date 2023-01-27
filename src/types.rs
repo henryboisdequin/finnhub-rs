@@ -1,8 +1,8 @@
 #![allow(non_snake_case, missing_docs)]
 
 use serde_derive::{Deserialize, Serialize};
+use std::collections::BTreeMap;
 use strum_macros::Display;
-use std::collections::{BTreeMap};
 
 #[derive(Serialize, Deserialize, Debug)]
 pub struct SymbolLookup {
@@ -325,11 +325,10 @@ pub enum ProfileToParam {
     CUSIP,
 }
 
-
 #[derive(Serialize, Deserialize, Debug)]
 pub struct ForexRates {
     pub base: String,
-    #[serde(flatten,deserialize_with = "super::utils::extract_conversion_pairs")]
+    #[serde(flatten, deserialize_with = "super::utils::extract_conversion_pairs")]
     pub quote: BTreeMap<String, f64>,
 }
 
@@ -339,4 +338,52 @@ pub struct ForexSymbol {
     #[serde(rename = "displaySymbol")]
     display_symbol: String,
     symbol: String,
+}
+
+#[derive(Debug)]
+pub enum Resolution {
+    OneMinute,
+    FiveMinute,
+    FifteenMinute,
+    ThirtyMinute,
+    OneHour,
+    OneDay,
+    OneWeek,
+    OneMonth,
+}
+
+impl ToString for Resolution {
+    fn to_string(&self) -> String {
+        let s = match self {
+            Self::OneMinute => "1",
+            Self::FiveMinute => "5",
+            Self::FifteenMinute => "15",
+            Self::ThirtyMinute => "30",
+            Self::OneHour => "60",
+            Self::OneDay => "D",
+            Self::OneWeek => "W",
+            Self::OneMonth => "M",
+        };
+
+        s.to_string()
+    }
+}
+
+#[allow(dead_code)]
+#[derive(Debug, Deserialize)]
+pub struct Candle {
+    #[serde(rename = "c")]
+    close: Vec<f64>,
+    #[serde(rename = "h")]
+    high: Vec<f64>,
+    #[serde(rename = "l")]
+    low: Vec<f64>,
+    #[serde(rename = "o")]
+    open: Vec<f64>,
+    #[serde(rename = "s")]
+    status: String,
+    #[serde(rename = "t")]
+    timestamp: Vec<u64>,
+    #[serde(rename = "v")]
+    volume: Vec<u32>,
 }

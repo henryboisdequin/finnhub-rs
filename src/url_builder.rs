@@ -10,12 +10,19 @@ impl UrlBuilder {
     /// Generate a new builder who will construct urls based on 'root'. This enables flexibility
     /// for things like a test server.
     pub fn new(root: &str) -> Self {
-        Self { root: root.to_string() }
+        Self {
+            root: root.to_string(),
+        }
     }
 
     /// Given an endpoint and url parameters, construct a url string with this object's root.
     pub fn url(&self, endpoint: &str, params: &Vec<(&str, String)>) -> String {
-        format!("{}/{}?{}", &self.root, endpoint, UrlBuilder::join_params(params))
+        format!(
+            "{}/{}?{}",
+            &self.root,
+            endpoint,
+            UrlBuilder::join_params(params)
+        )
     }
 
     /// Create a url parameter string.
@@ -46,8 +53,8 @@ impl UrlBuilder {
     /// Create a filename based on an endpoint in 'url'. Give filename extension, 'extension'.
     #[cfg(test)]
     pub fn test_filename(&self, url: String, extension: String) -> String {
-        use regex::Regex;
         use crate::utils::get_dummy_api_key;
+        use regex::Regex;
 
         // Chop off the root.
         let root_len = self.root.len() + 1; // include '/'

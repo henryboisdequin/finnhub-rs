@@ -27,10 +27,10 @@
 pub mod client;
 /// All return types for all Finnhub-rs client methods.
 pub mod types;
-/// Utility functions related to testing and acquiring api keys.
-pub mod utils;
 /// Helper for generating urls and test filenames.
 pub mod url_builder;
+/// Utility functions related to testing and acquiring api keys.
+pub mod utils;
 
 /// If you are adding a new network test, you'll first need to test with a real api
 /// key to generate a response. After your test is passing, replace your api key with
@@ -40,9 +40,8 @@ pub mod url_builder;
 mod test {
     // `cargo t -- --nocapture` to test
     use super::client::*;
-    use super::utils::*;
     use super::types::*;
-
+    use super::utils::*;
 
     /// Macro to generate client and run api test. Helps remove a bunch of boilerplate.
     macro_rules! api_test {
@@ -56,7 +55,7 @@ mod test {
             let actual = format!("{:#?}", obj);
 
             assert_eq!(actual, expected);
-        }
+        };
     }
 
     #[test]
@@ -68,16 +67,17 @@ mod test {
 
     #[tokio::test]
     async fn symbol_lookup_test() {
-        api_test!(|client: Client| async move {
-            client.symbol_lookup("AAPL".into()).await
-        });
+        api_test!(|client: Client| async move { client.symbol_lookup("AAPL".into()).await });
     }
 
     #[tokio::test]
     async fn stock_symbol_test() {
         let test_api_key = get_dummy_api_key();
         let client = Client::new(test_api_key);
-        let (obj, _url) = client.stock_symbol("US".into(), None, None, None).await.unwrap();
+        let (obj, _url) = client
+            .stock_symbol("US".into(), None, None, None)
+            .await
+            .unwrap();
 
         // TODO: Figure out a real test. Also, this test always seems to terminate before completion,
         //       so figure that out.
@@ -87,21 +87,27 @@ mod test {
     #[tokio::test]
     async fn company_profile2_symbol_test() {
         api_test!(|client: Client| async move {
-            client.company_profile2(ProfileToParam::Symbol, "TSLA".into()).await
+            client
+                .company_profile2(ProfileToParam::Symbol, "TSLA".into())
+                .await
         });
     }
 
     #[tokio::test]
     async fn company_profile2_isin_test() {
         api_test!(|client: Client| async move {
-            client.company_profile2(ProfileToParam::ISIN, "US5949181045".into()).await
+            client
+                .company_profile2(ProfileToParam::ISIN, "US5949181045".into())
+                .await
         });
     }
 
     #[tokio::test]
     async fn company_profile2_cusip_test() {
         api_test!(|client: Client| async move {
-            client.company_profile2(ProfileToParam::CUSIP, "023135106".into()).await
+            client
+                .company_profile2(ProfileToParam::CUSIP, "023135106".into())
+                .await
         });
     }
 
@@ -136,61 +142,44 @@ mod test {
     #[tokio::test]
     async fn company_news_test() {
         api_test!(|client: Client| async move {
-            client.company_news(
-                "GOOGL".into(),
-                "2020-12-10".into(),
-                "2021-01-10".into(),
-            )
-            .await
+            client
+                .company_news("GOOGL".into(), "2020-12-10".into(), "2021-01-10".into())
+                .await
         });
     }
 
     #[tokio::test]
     async fn news_sentiment_test() {
-        api_test!(|client: Client| async move {
-            client.news_sentiment("FB".into()).await
-        });
+        api_test!(|client: Client| async move { client.news_sentiment("FB".into()).await });
     }
 
     #[tokio::test]
     async fn peers_test() {
-        api_test!(|client: Client| async move {
-            client.peers("MCD".into()).await
-        });
+        api_test!(|client: Client| async move { client.peers("MCD".into()).await });
     }
 
     #[tokio::test]
     async fn quote_test() {
-        api_test!(|client: Client| async move {
-            client.quote("TSLA".into()).await
-        });
+        api_test!(|client: Client| async move { client.quote("TSLA".into()).await });
     }
 
     #[tokio::test]
     async fn basic_financials_test() {
-        api_test!(|client: Client| async move {
-            client.basic_financials("NFLX".into()).await
-        });
+        api_test!(|client: Client| async move { client.basic_financials("NFLX".into()).await });
     }
 
     #[tokio::test]
     async fn forex_rates() {
-        api_test!(|client: Client| async move {
-            client.forex_rates("USD".into()).await
-        });
+        api_test!(|client: Client| async move { client.forex_rates("USD".into()).await });
     }
 
     #[tokio::test]
     async fn forex_exchanges() {
-        api_test!(|client: Client| async move {
-            client.forex_exchanges().await
-        });
+        api_test!(|client: Client| async move { client.forex_exchanges().await });
     }
 
     #[tokio::test]
     async fn forex_symbol() {
-        api_test!(|client: Client| async move {
-            client.forex_symbol("oanda".into()).await
-        });
+        api_test!(|client: Client| async move { client.forex_symbol("oanda".into()).await });
     }
 }
