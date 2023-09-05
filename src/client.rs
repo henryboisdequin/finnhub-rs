@@ -5,6 +5,7 @@ use exitfailure::ExitFailure;
 use reqwest::Url;
 use crate::url_builder::UrlBuilder;
 use serde::de::DeserializeOwned;
+use chrono::NaiveDate;
 
 /// Finnhub API Client object.
 #[derive(Debug, Clone)]
@@ -81,15 +82,16 @@ impl Client {
     pub async fn company_news(
         &self,
         symbol: String,
-        from: String,
-        to: String,
+        from: NaiveDate,
+        to: NaiveDate,
     ) -> Result<(Vec<CompanyNews>, Url), ExitFailure> {
+        let fmt_str = "%Y-%m-%d".to_string();
         self.get::<Vec<CompanyNews>>(
             "company-news",
             &mut vec![
                 ("symbol", symbol),
-                ("from", from),
-                ("to", to),
+                ("from", from.format(&fmt_str).to_string()),
+                ("to", to.format(&fmt_str).to_string()),
             ]
         ).await
     }
